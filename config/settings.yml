@@ -1,0 +1,4 @@
+fullname:
+  max_size: 80
+email:
+  max_size: 80
