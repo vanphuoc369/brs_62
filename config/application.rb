@@ -1,11 +1,10 @@
-require_relative 'boot'
+require_relative "boot"
 
-require 'rails/all'
+require "rails/all"
 
 Bundler.require(*Rails.groups)
 
 module BookReview
-  #
   class Application < Rails::Application
     config.load_defaults 5.1
   end

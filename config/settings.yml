@@ -2,3 +2,5 @@ fullname:
   max_size: 80
 email:
   max_size: 80
+users:
+  page_size: 10

@@ -20,4 +20,12 @@ class User < ApplicationRecord
   validates :fullname, presence: true, length: {maximum: Settings.fullname.max_size}
 
   before_save :downcase_email
+
+  scope :newest, ->{order created_at: :desc}
+
+  private
+
+  def downcase_email
+    self.email = email.downcase
+  end
 end
