@@ -17,6 +17,8 @@ gem "i18n-js"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 gem "mini_magick", "4.7.0"
+gem "minitest", ">=5.10.3"
+gem "minitest-reporters", ">=1.1.19"
 gem "mysql2"
 gem "nokogiri", "1.8.1"
 gem "puma", "~> 3.7"
@@ -31,6 +33,9 @@ gem "will_paginate", "3.1.6"
 group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   gem "capybara", "~> 2.13"
+  gem "guard", "2.14.1"
+  gem "guard-minitest", "2.4.6"
+  gem "guard-rspec", "4.7.3"
   gem "selenium-webdriver"
 end
 
