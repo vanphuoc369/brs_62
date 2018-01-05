@@ -1,0 +1,65 @@
+<div id="sidebar" class="span3">
+  <div class="well well-small">
+    <ul class="nav nav-list">
+      <strong><%= t "static_pages.Categorys" %></strong>
+      <li><a href="products.html"><span class="icon-chevron-right"></span>Van Hoc</a></li>
+      <li><a href="products.html"><span class="icon-chevron-right"></span>Lich Su</a></li>
+      <li><a href="products.html"><span class="icon-chevron-right"></span>Tieu Thuyet</a></li>
+      <li><a href="products.html"><span class="icon-chevron-right"></span>Tham hiem</a></li>
+      <li> &nbsp;</li>
+    </ul>
+  </div>
+  <div class="well well-small">
+    <ul class="nav nav-list" id= "list_popular_book">
+      <strong><%= t "static_pages.title_popular_book" %></strong>
+      <li>
+        <div class="thumbnail">
+          <%= link_to "#" do %>
+            <%= image_tag("b.jpg", class: "img_popular_books") %>
+          <% end %>
+          <div class="caption">
+            <h4>
+              <button class="fa fa-heart-o"></button>
+              <span class="pull-right">$22.00</span>
+            </h4>
+            <a href="#">
+              <h5 class="name_popular_books">Name book</h5>
+            </a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="thumbnail">
+          <%= link_to "#" do %>
+            <%= image_tag("d.jpg", class: "img_popular_books") %>
+          <% end %>
+          <div class="caption">
+            <h4>
+              <button class="fa fa-heart-o"></button>
+              <span class="pull-right">$22.00</span>
+            </h4>
+            <a href="#">
+              <h5 class="name_popular_books">Name book</h5>
+            </a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="thumbnail">
+          <%= link_to "#" do %>
+            <%= image_tag("i.jpg", class: "img_popular_books") %>
+          <% end %>
+          <div class="caption">
+            <h4>
+              <button class="fa fa-heart-o"></button>
+              <span class="pull-right">$22.00</span>
+            </h4>
+            <a href="#">
+              <h5 class="name_popular_books">Name book</h5>
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
