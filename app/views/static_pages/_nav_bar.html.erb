@@ -17,10 +17,15 @@
           <li class=""><a href="grid-view.html">Option 2</a></li>
           <li class=""><a href="three-col.html">Option 3</a></li>
         </ul>
+<<<<<<< 66c11a0304d60be15418cd92b6fae40b288dcfd0
         <%= form_for "#", class: "navbar-search pull-left",
           html: {style: "display: inline"} do |f| %>
         <%= f.text_field :search, placeholder: t("static_pages.search"),
           class: "search-query span2", style: "margin: 5px 0px; width: 270px;" %>
+=======
+        <%= form_for "#", class: "navbar-search pull-left", html: {style: "display: inline"} do |f| %>
+        <%= f.text_field :search, placeholder: t("static_pages.search"), class: "search-query span2", style: "margin: 5px 0px; width: 270px;" %>
+>>>>>>> Static pages
         <div class="btn-group" id="search_for">
           <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
             <%= t "static_pages.search_for" %>
@@ -44,8 +49,12 @@
             <div class="dropdown-menu">
               <%= form_for :user, class: "form-horizontal loginFrm" do |f| %>
               <%= f.text_field :email, class: "span2", placeholder: t("static_pages.Email") %><br />
+<<<<<<< 66c11a0304d60be15418cd92b6fae40b288dcfd0
               <%= f.password_field :password, class: "span2",
                 placeholder: t("static_pages.Password") %><br />
+=======
+              <%= f.password_field :password, class: "span2", placeholder: t("static_pages.Password") %><br />
+>>>>>>> Static pages
               <%= f.check_box :remember %><%= t "static_pages.checkbox_remember" %><br />
               <%= f.submit t "static_pages.btn_sign_in", class: "shopBtn btn-block" %>
               <% end %>
