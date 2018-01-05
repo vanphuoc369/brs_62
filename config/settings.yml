@@ -4,3 +4,5 @@ email:
   max_size: 80
 users:
   page_size: 10
+books:
+  per_page: 9

@@ -1,0 +1,20 @@
+<% @books.each do |book| %>
+  <li class="book">
+    <div class="thumbnail">
+      <%= link_to image_tag( book.image, class: "img_book"), "#" %>
+      <div class="caption">
+        <h5>
+          <button class="fa fa-heart-o"></button>
+          <%= book.title %>
+        </h5>
+        <h4>
+          <button class="fa fa-cart-plus"></button>
+          <span class="pull-right">$
+            <%= book.price %>
+          </span>
+        </h4>
+      </div>
+    </div>
+  </li>
+<% end %>
+<%= will_paginate %>

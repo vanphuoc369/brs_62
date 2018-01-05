@@ -1,0 +1,15 @@
+ <div class="well well-small">
+  <a class="btn btn-mini pull-right" href="#">
+    <%= t "static_pages.btn_view" %>
+    <span class="icon-plus"></span>
+  </a>
+  <%= t "static_pages.title_popular_book" %>
+</div>
+<hr>
+<div class="well well-small">
+  <%= link_to "#", class: "btn btn-mini pull-right" do %>
+    <%= t("static_pages.btn_view") %>
+    <%= content_tag :span, "", class: "icon-plus" %>
+  <% end %>
+  <%= t "static_pages.title_loved_book" %>
+</div>

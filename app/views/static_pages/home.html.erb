@@ -1,28 +1,49 @@
 <% provide :title, t("static_pages.title_home") %>
-<div class="container">
-  <%= render "upper_header" %>
-  <%= render "lower_header" %>
-  <%= render "nav_bar" %>
-  <div class="row">
-    <%= render "left_body" %>
-    <div class="span9" id="right_body">
-      <%= render "right_body" %>
+<div class="well np">
+  <div id="myCarousel" class="carousel slide homCar">
+    <div class="carousel-inner">
+      <div class="item">
+        <%= link_to "#" do %>
+          <%= image_tag("a.jpg", class: "img_slide") %>
+        <% end %>
+        <div class="carousel-caption">
+          <h4>Bootstrap shopping cart</h4>
+          <p><span>Very clean simple to use</span></p>
+        </div>
+      </div>
+      <div class="item">
+        <%= link_to "#" do %>
+          <%= image_tag("b.jpg", class: "img_slide") %>
+        <% end %>
+        <div class="carousel-caption">
+          <h4>Bootstrap Ecommerce template</h4>
+          <p><span>Highly Google seo friendly</span></p>
+        </div>
+      </div>
+      <div class="item active">
+        <%= link_to "#" do %>
+          <%= image_tag("c.jpg", class: "img_slide") %>
+        <% end %>
+        <div class="carousel-caption">
+          <h4>Twitter Bootstrap cart</h4>
+          <p><span>Very easy to integrate and expand.</span></p>
+        </div>
+      </div>
+      <div class="item">
+        <%= link_to "#" do %>
+          <%= image_tag("d.jpg", class: "img_slide") %>
+        <% end %>
+        <div class="carousel-caption">
+          <h4>Bootstrap templates integration</h4>
+          <p><span>Compitable to many more opensource cart</span></p>
+        </div>
+      </div>
     </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
   </div>
-  <div class="well well-small">
-    <a class="btn btn-mini pull-right" href="#">
-      <%= t "static_pages.btn_view" %>
-      <span class="icon-plus"></span>
-    </a>
-    <%= t "static_pages.title_popular_book" %>
-  </div>
-  <hr>
-  <div class="well well-small">
-    <%= link_to "#", class: "btn btn-mini pull-right" do %>
-      <%= t("static_pages.btn_view") %>
-      <%= content_tag :span, "", class: "icon-plus" %>
-    <% end %>
-    <%= t "static_pages.title_loved_book" %>
-  </div>
+  <br>
+  <%= render "new_books" %>
+  <br>
+  <%= render "books" %>
 </div>
-<%= render "footer" %>

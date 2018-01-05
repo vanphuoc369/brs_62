@@ -33,7 +33,7 @@ en:
   hello: "Hello world"
 
   application:
-    title: "BookReview"
+    title: "Book Review System"
 
   users:
     find_danger: "Không tìm thấy người dùng"
@@ -52,8 +52,6 @@ en:
     error_messages:
       error_msg: "The form contains "
       error: " error"
-    title: "Book Review System"
-
   static_pages:
     title_home: "Home"
     title_popular_book: "Popular Books"
@@ -73,7 +71,6 @@ en:
     search: "Search"
     search_for: "Search for"
     btn_view_all: "View all books"
-
   footer:
     Address: "Address"
     addr: "255-257 Hùng Vương - Thanh Khê - Đà Nẵng."
@@ -84,3 +81,6 @@ en:
     content: "If you love to read, at some point you will want to share a book you love with others.
       You may already do this by talking about books with friends."
     copyright: "Copyright &copy; 2018 "
+  books:
+    all_books: "All books"
+    title_h3: "Show book details"

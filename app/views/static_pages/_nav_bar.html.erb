@@ -10,27 +10,29 @@
         <ul class="nav">
           <li class="active">
             <a href="index.html">
-            <%= t "static_pages.title_home" %>
+              <%= t "static_pages.title_home" %>
             </a>
           </li>
           <li class=""><a href="list-view.html">Option 1</a></li>
           <li class=""><a href="grid-view.html">Option 2</a></li>
           <li class=""><a href="three-col.html">Option 3</a></li>
         </ul>
-        <%= form_for "#", class: "navbar-search pull-left", html: {style: "display: inline"} do |f| %>
-          <%= f.text_field :search, placeholder: t("static_pages.search"), class: "search-query span2", style: "margin: 5px 0px; width: 270px;" %>
-          <div class="btn-group" id="search_for">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-              <%= t "static_pages.search_for" %>
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li><%= f.submit "Title", name: "Title", class: "sub_search" %></li>
-              <li><%= f.submit "Category", name: "Category", class: "sub_search" %></li>
-              <li><%= f.submit "Rating", name: "Rating", class: "sub_search" %></li>
-              <li><%= f.submit "Favorite", name: "Favorite", class: "sub_search" %></li>
-            </ul>
-          </div>
+        <%= form_for "#", class: "navbar-search pull-left",
+          html: {style: "display: inline"} do |f| %>
+        <%= f.text_field :search, placeholder: t("static_pages.search"),
+          class: "search-query span2", style: "margin: 5px 0px; width: 270px;" %>
+        <div class="btn-group" id="search_for">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            <%= t "static_pages.search_for" %>
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= f.submit "Title", name: "Title", class: "sub_search" %></li>
+            <li><%= f.submit "Category", name: "Category", class: "sub_search" %></li>
+            <li><%= f.submit "Rating", name: "Rating", class: "sub_search" %></li>
+            <li><%= f.submit "Favorite", name: "Favorite", class: "sub_search" %></li>
+          </ul>
+        </div>
         <% end %>
         <ul class="nav pull-right">
           <li class="dropdown">
@@ -41,10 +43,11 @@
             </a>
             <div class="dropdown-menu">
               <%= form_for :user, class: "form-horizontal loginFrm" do |f| %>
-                <%= f.text_field :email, class: "span2", placeholder: t("static_pages.Email") %><br />
-                <%= f.password_field :password, class: "span2", placeholder: t("static_pages.Password") %><br />
-                <%= f.check_box :remember %><%= t "static_pages.checkbox_remember" %><br />
-                <%= f.submit t "static_pages.btn_sign_in", class: "shopBtn btn-block" %>
+              <%= f.text_field :email, class: "span2", placeholder: t("static_pages.Email") %><br />
+              <%= f.password_field :password, class: "span2",
+                placeholder: t("static_pages.Password") %><br />
+              <%= f.check_box :remember %><%= t "static_pages.checkbox_remember" %><br />
+              <%= f.submit t "static_pages.btn_sign_in", class: "shopBtn btn-block" %>
               <% end %>
             </div>
           </li>
