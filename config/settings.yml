@@ -11,3 +11,5 @@ password:
   reset_expired: 2
 sessions:
   remember: "1"
+cart_count: 2
+cart_price: "$448.42"

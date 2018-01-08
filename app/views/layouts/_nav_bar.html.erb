@@ -34,24 +34,6 @@
           </ul>
         </div>
         <% end %>
-        <ul class="nav pull-right">
-          <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-              <span class="icon-lock"></span>
-              <%= t "static_pages.btn_login" %>
-              <b class="caret"></b>
-            </a>
-            <div class="dropdown-menu">
-              <%= form_for :user, class: "form-horizontal loginFrm" do |f| %>
-              <%= f.text_field :email, class: "span2", placeholder: t("static_pages.Email") %><br />
-              <%= f.password_field :password, class: "span2",
-                placeholder: t("static_pages.Password") %><br />
-              <%= f.check_box :remember %><%= t "static_pages.checkbox_remember" %><br />
-              <%= f.submit t "static_pages.btn_sign_in", class: "shopBtn btn-block" %>
-              <% end %>
-            </div>
-          </li>
-        </ul>
       </div>
     </div>
   </div>

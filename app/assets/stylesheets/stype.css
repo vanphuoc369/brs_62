@@ -1,5 +1,5 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 
 body{
   background:url(white_leather.png) repeat 0 0;
@@ -110,4 +110,31 @@ input.sub_search {
   margin: 0px;
   width: 28%;
   border: none;
+}
+.shopBtn{
+  min-height: 34px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 34px;
+  text-align: center;
+  color: #fff;
+  border-radius: 2px;
+  background: #f89406;
+  display:inline-block;
+  padding:0 12px;
+  border:0;
+}
+.error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
 }

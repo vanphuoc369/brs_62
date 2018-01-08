@@ -9,21 +9,27 @@
     <%= stylesheet_link_tag "//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" %>
 
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+
     <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" %>
+
+    <%= javascript_include_tag "https://code.jquery.com/jquery-3.2.1.slim.min.js" %>
   </head>
   <body>
-    <%= render "static_pages/upper_header" %>
+    <%= render "layouts/upper_header" %>
     <div class="container">
-      <%= render "static_pages/lower_header" %>
-      <%= render "static_pages/nav_bar" %>
+      <%= render "layouts/lower_header" %>
+      <%= render "layouts/nav_bar" %>
       <div class="row">
-        <%= render "static_pages/left_body" %>
+        <%= render "layouts/left_body" %>
         <div class="span9" id="right_body">
+          <% flash.each do |message_type, message| %>
+            <div class="alert alert-<%= message_type %>"><%= message %></div>
+          <% end %>
           <%= yield %>
+          <%= render "layouts/popular_books" %>
         </div>
       </div>
-      <%= render "static_pages/popular_books" %>
     </div>
-    <%= render "static_pages/footer" %>
+    <%= render "layouts/footer" %>
   </body>
 </html>

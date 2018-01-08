@@ -1,0 +1,39 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="topNav">
+    <div class="container">
+      <div class="alignR">
+        <div class="pull-left socialNw">
+          <a href="#"><span class="fa fa-twitter"></span></a>
+          <a href="#"><span class="fa fa-facebook"></span></a>
+          <a href="#"><span class="fa fa-youtube"></span></a>
+        </div>
+        <% if logged_in? %>
+          <%= link_to current_user do %>
+            <%= content_tag :span, "", class: "fa fa-user-circle-o" %>
+            <%= t ".my_account" %>
+          <% end %>
+
+          <%= link_to logout_path, method: :delete do %>
+            <%= content_tag :span, "", class: "fa fa-minus-circle" %>
+            <%= t ".logout" %>
+          <% end %>
+        <% else %>
+          <%= link_to login_path do %>
+            <%= content_tag :span, "", class: "fa fa-user-circle" %>
+            <%= t ".login" %>
+          <% end %>
+
+          <%= link_to signup_path do %>
+            <%= content_tag :span, "", class: "fa fa-plus-circle" %>
+            <%= t ".register" %>
+          <% end %>
+        <% end %>
+        <%= link_to "#" do %>
+          <%= content_tag :span, "", class: "fa fa-shopping-cart" %>
+          <%= t(".item", count: Settings.cart_count) %>
+          <%= content_tag :span, Settings.cart_price, class: "badge badge-warning" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
