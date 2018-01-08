@@ -4,9 +4,9 @@
       <%= "#{t ".error_msg"}#{pluralize(object.errors.count, t(".error"))}" %>.
     </div>
     <ul>
-    <% object.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
+      <% object.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
     </ul>
   </div>
 <% end %>
