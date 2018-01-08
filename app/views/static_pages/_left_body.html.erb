@@ -10,6 +10,25 @@
     </ul>
   </div>
   <div class="well well-small">
+    <ul class="nav nav-list rating">
+      <strong><%= "Rating" %></strong>
+      <% 5.times do |m| %>
+        <li>
+          <%= link_to books_path(star: m+1) do %>
+            <% 5.times do |n| %>
+              <% if n <= m%>
+                <span class="fa fa-star checked"></span>
+              <% else %>
+                <span class="fa fa-star"></span>
+              <% end %>
+            <% end %>
+          <% end %>
+        </li>
+      <% end %>
+      <li> &nbsp;</li>
+    </ul>
+  </div>
+  <div class="well well-small">
     <ul class="nav nav-list" id= "list_popular_book">
       <strong><%= t "static_pages.title_popular_book" %></strong>
       <li>

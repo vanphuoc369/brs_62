@@ -7,8 +7,6 @@ class ApplicationController < ActionController::Base
     redirect_to root_url unless current_user? @user
   end
 
-  private
-
   def logged_in_user
     return if logged_in?
     store_location
