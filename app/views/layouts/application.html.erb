@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:title)%> | <%= t "application.title" %></title>
+    <title><%= yield(:title) %> | <%= t "application.title" %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
@@ -12,9 +12,18 @@
     <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" %>
   </head>
   <body>
-    <% flash.each do |message_type, message| %>
-      <div class="alert alert-<%= message_type %>"><%= message %></div>
-    <% end %>
-    <%= yield %>
+    <%= render "static_pages/upper_header" %>
+    <div class="container">
+      <%= render "static_pages/lower_header" %>
+      <%= render "static_pages/nav_bar" %>
+      <div class="row">
+        <%= render "static_pages/left_body" %>
+        <div class="span9" id="right_body">
+          <%= yield %>
+        </div>
+      </div>
+      <%= render "static_pages/popular_books" %>
+    </div>
+    <%= render "static_pages/footer" %>
   </body>
 </html>

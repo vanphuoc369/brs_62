@@ -5,4 +5,6 @@ class Book < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :users, through: :user_books
   has_many :categories, through: :book_categories
+
+  scope :alpha, ->{order title: :desc}
 end
