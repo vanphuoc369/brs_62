@@ -52,3 +52,35 @@ en:
     error_messages:
       error_msg: "The form contains "
       error: " error"
+    title: "Book Review System"
+
+  static_pages:
+    title_home: "Home"
+    title_popular_book: "Popular Books"
+    title_loved_book: "The most loved books"
+    btn_view: "View more"
+    Books: "Books"
+    New_Books: "New Books "
+    Categorys: "Categorys"
+    my_account: "My Account"
+    register: "Free Register"
+    item: "Item( %{count} ) -"
+    btn_login: "Login"
+    checkbox_remember: "Remember me"
+    btn_sign_in: "Sign in"
+    Email: "Email"
+    Password: "Password"
+    search: "Search"
+    search_for: "Search for"
+    btn_view_all: "View all books"
+
+  footer:
+    Address: "Address"
+    addr: "255-257 Hùng Vương - Thanh Khê - Đà Nẵng."
+    Contact: "Contact"
+    phone: "SDT: 0123456789"
+    email: "Email: email@gmail.com"
+    name: "Book Review System"
+    content: "If you love to read, at some point you will want to share a book you love with others.
+      You may already do this by talking about books with friends."
+    copyright: "Copyright &copy; 2018 "

@@ -1,0 +1,26 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="topNav">
+    <div class="container">
+      <div class="alignR">
+        <div class="pull-left socialNw">
+          <a href="#"><span class="fa fa-twitter"></span></a>
+          <a href="#"><span class="fa fa-facebook"></span></a>
+          <a href="#"><span class="fa fa-youtube"></span></a>
+        </div>
+        <%= link_to "#" do %>
+          <%= content_tag :span, "", class: "fa fa-user-circle-o" %>
+          <%= t "static_pages.my_account" %>
+        <% end %>
+        <%= link_to "#" do %>
+          <%= content_tag :span, "", class: "fa fa-plus-circle" %>
+          <%= t "static_pages.register" %>
+        <% end %>
+        <%= link_to "#" do %>
+          <%= content_tag :span, "", class: "fa fa-shopping-cart" %>
+          <%= t("static_pages.item", count: 2) %>
+          <%= content_tag :span, "$448.42", class: "badge badge-warning" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
