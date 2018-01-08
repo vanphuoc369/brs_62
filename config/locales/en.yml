@@ -31,5 +31,24 @@
 
 en:
   hello: "Hello world"
+
   application:
     title: "BookReview"
+
+  users:
+    find_danger: "Không tìm thấy người dùng"
+    sign_up_success: "Đăng ký thành công"
+    index:
+      title: "Tất cả người dùng"
+      h1: "Tất cả người dùng"
+    new:
+      title: "Đăng ký"
+      h1: "Đăng ký"
+      pass_confirm: "Xác nhận mật khẩu"
+      submit: "Đăng ký"
+      fullname: "Họ và tên"
+      pass: "Mật khẩu"
+  shared:
+    error_messages:
+      error_msg: "The form contains "
+      error: " error"
