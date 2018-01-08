@@ -6,3 +6,8 @@ users:
   page_size: 10
 books:
   per_page: 9
+password:
+  min_size: 6
+  reset_expired: 2
+sessions:
+  remember: "1"

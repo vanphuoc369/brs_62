@@ -48,6 +48,8 @@ en:
       submit: "Đăng ký"
       fullname: "Họ và tên"
       pass: "Mật khẩu"
+    show:
+      log_out: "Log out"
   shared:
     error_messages:
       error_msg: "The form contains "
@@ -84,3 +86,11 @@ en:
   books:
     all_books: "All books"
     title_h3: "Show book details"
+  sessions:
+    error_log_in: "Sai địa chỉ email hoặc mật khẩu"
+    new:
+      h1: "Login"
+      submit: "Login"
+      remember_me: "Remember me"
+      content: "Chưa có tài khoản? %{sign_up_link}"
+      link_content: "Đăng ký"
