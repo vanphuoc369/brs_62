@@ -2,11 +2,15 @@
   <div class="well well-small">
     <ul class="nav nav-list">
       <strong><%= t "static_pages.Categorys" %></strong>
-      <li><a href="products.html"><span class="icon-chevron-right"></span>Van Hoc</a></li>
-      <li><a href="products.html"><span class="icon-chevron-right"></span>Lich Su</a></li>
-      <li><a href="products.html"><span class="icon-chevron-right"></span>Tieu Thuyet</a></li>
-      <li><a href="products.html"><span class="icon-chevron-right"></span>Tham hiem</a></li>
-      <li> &nbsp;</li>
+        <li>
+          <button class="w3-button w3-block w3-left-align" onclick="showChilds()">
+            <%= t ".type1" %> <i class="fa fa-caret-down"></i>
+          </button>
+          <div id="list-childs" class="w3-hide w3-white w3-card ">
+            <%= link_to t(".type11"), "#", class: "w3-bar-item w3-button category" %>
+            <%= link_to t(".type12"), "#", class: "w3-bar-item w3-button category" %>
+          </div>
+        </li>
     </ul>
   </div>
   <div class="well well-small">

@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :load_user, except: %i(index new create)
+  before_action :logged_in_user, except: %i(show new create)
+  before_action :correct_user, only: %i(edit update)
 
   def index
     @users = User.newest.paginate page: params[:page], per_page: Settings.users.page_size
@@ -18,6 +20,17 @@ class UsersController < ApplicationController
       redirect_to login_path
     else
       render :new
+    end
+  end
+
+  def edit; end
+
+  def update
+    if @user.update_attributes user_params
+      flash[:success] = t ".edit_success"
+      redirect_to @user
+    else
+      render :edit
     end
   end
 

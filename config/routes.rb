@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   get  "/signup", to: "users#new"
-  resources :users, except: %i(edit, update, destroy)
+  resources :users, except: :destroy
   root "static_pages#home"
   resources :books
 end
