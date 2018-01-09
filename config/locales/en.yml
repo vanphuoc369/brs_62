@@ -111,6 +111,10 @@ en:
   books:
     all_books: "All books"
     title_h3: "Show book details"
+    list_books: "List Books"
+    search:
+      title_search: "Find result with "
+      title_search_rating: "Find result for %{star} star rating"
   sessions:
     error_log_in: "Sai địa chỉ email hoặc mật khẩu"
     new:

@@ -16,6 +16,21 @@
           <li class=""><%= link_to t(".review"), "#" %></li>
           <li class=""><%= link_to t(".contact"), "#" %></li>
         </ul>
+        <%= form_tag books_path, class: "navbar-search pull-left",
+          method: "get", html: {style: "display: inline"} do %>
+          <%= text_field_tag :search, nil, placeholder: t("static_pages.search"), class: "search-query span2" %>
+          <div class="btn-group" id="search_for">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+              <%= t "static_pages.search_for" %>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><%= submit_tag "Title", class: "sub_search", name: "search_for" %></li>
+              <li><%= submit_tag "Author", class: "sub_search", name: "search_for" %></li>
+              <li><%= submit_tag "Favorite", class: "sub_search", name: "search_for" %></li>
+            </ul>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
