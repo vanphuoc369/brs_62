@@ -31,10 +31,15 @@
 
 en:
   hello: "Hello world"
-
+  layouts:
+    upper_header:
+      my_account: "Tài khoản"
+      register: "Đăng ký"
+      item: "Item( %{count} ) -"
+      login: "Đăng nhập"
+      logout: "Đăng xuất"
   application:
     title: "Book Review System"
-
   users:
     find_danger: "Không tìm thấy người dùng"
     sign_up_success: "Đăng ký thành công"
@@ -43,11 +48,12 @@ en:
       h1: "Tất cả người dùng"
     new:
       title: "Đăng ký"
-      h1: "Đăng ký"
+      h3: "Đăng ký"
       pass_confirm: "Xác nhận mật khẩu"
       submit: "Đăng ký"
       fullname: "Họ và tên"
       pass: "Mật khẩu"
+      information: "Thông tin cá nhân"
     show:
       log_out: "Log out"
   shared:
@@ -58,13 +64,11 @@ en:
     title_home: "Home"
     title_popular_book: "Popular Books"
     title_loved_book: "The most loved books"
+
     btn_view: "View more"
     Books: "Books"
     New_Books: "New Books "
     Categorys: "Categorys"
-    my_account: "My Account"
-    register: "Free Register"
-    item: "Item( %{count} ) -"
     btn_login: "Login"
     checkbox_remember: "Remember me"
     btn_sign_in: "Sign in"
@@ -89,8 +93,11 @@ en:
   sessions:
     error_log_in: "Sai địa chỉ email hoặc mật khẩu"
     new:
-      h1: "Login"
-      submit: "Login"
+      pass: "Mật khẩu"
+      title: "Đăng nhập"
+      h3: "Đăng nhập"
+      information: "Thông tin đăng nhập"
+      submit: "Đăng nhập"
       remember_me: "Remember me"
       content: "Chưa có tài khoản? %{sign_up_link}"
       link_content: "Đăng ký"

@@ -1,4 +1,12 @@
-<%= @user.fullname %>, <%= @user.email %>
-<% if logged_in? %>
-  <%= link_to t(".log_out"), logout_path, method: :delete %>
-<% end %>
+<% provide :title, @user.fullname %>
+<div class = "well well-small">
+  <div class = "row-fluid">
+    <div class="span5">
+      <%= image_tag("user-icon.png") %>
+    </div>
+    <div class="span7">
+      <h3><%= @user.fullname %></h3>
+      <hr class="soft"/>
+    </div>
+  </div>
+</div>
