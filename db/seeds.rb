@@ -17,3 +17,16 @@ end
 	Book.create!(title: title, author: author, publish_date: publish_date,
 		number_of_pages: 50, image: "d.jpg", summary: summary, price: 50, quantity: 3)
 end
+
+vanhoc = Category.create!(name: "Sách văn học", type_id: 0)
+lichsu = Category.create!(name: "Sách lịch sử", type_id: 0)
+
+3.times do |n|
+  name = "Thể loại văn học #{n+1}"
+  Category.create!(name: name, type_id: 1)
+end
+
+3.times do |n|
+  name = "Thể loại lịch sử #{n+1}"
+  Category.create!(name: name, type_id: 2)
+end

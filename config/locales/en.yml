@@ -38,14 +38,27 @@ en:
       item: "Item( %{count} ) -"
       login: "Đăng nhập"
       logout: "Đăng xuất"
+    nav_bar:
+      home: "Trang chủ"
+      about: "Giới thiệu"
+      book: "Sách"
+      review: "Đánh giá"
+      contact: "Liên hệ"
+    left_body:
+      type1: "Sách văn học"
+      type11: "Tiểu thuyết tình cảm"
+      type12: "Truyện trinh thám"
   application:
     title: "Book Review System"
+
   users:
     find_danger: "Không tìm thấy người dùng"
     sign_up_success: "Đăng ký thành công"
+    edit_success: "Cập nhập thành công"
     index:
       title: "Tất cả người dùng"
       h1: "Tất cả người dùng"
+      please_log_in: "Vui lòng đăng nhập tài khoản"
     new:
       title: "Đăng ký"
       h3: "Đăng ký"
@@ -55,7 +68,16 @@ en:
       pass: "Mật khẩu"
       information: "Thông tin cá nhân"
     show:
-      log_out: "Log out"
+      edit: "Cập nhập"
+
+    edit:
+      title: "Cập nhập"
+      h3: "Cập nhập thông tin"
+      information: "Thông tin cá nhân"
+      fullname: "Họ và tên"
+      pass: "Mật khẩu"
+      pass_confirm: "Xác nhận mật khẩu"
+      submit: "Cập nhập"
   shared:
     error_messages:
       error_msg: "The form contains "
@@ -64,11 +86,10 @@ en:
     title_home: "Home"
     title_popular_book: "Popular Books"
     title_loved_book: "The most loved books"
-
     btn_view: "View more"
     Books: "Books"
     New_Books: "New Books "
-    Categorys: "Categorys"
+    Categorys: "Thể loại"
     btn_login: "Login"
     checkbox_remember: "Remember me"
     btn_sign_in: "Sign in"

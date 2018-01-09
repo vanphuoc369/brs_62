@@ -9,31 +9,13 @@
       <div class="nav-collapse">
         <ul class="nav">
           <li class="active">
-            <a href="index.html">
-              <%= t "static_pages.title_home" %>
-            </a>
+            <%= link_to t(".home"), root_path %>
           </li>
-          <li class=""><a href="list-view.html">Option 1</a></li>
-          <li class=""><a href="grid-view.html">Option 2</a></li>
-          <li class=""><a href="three-col.html">Option 3</a></li>
+          <li class=""><%= link_to t(".about"), "#{}" %></li>
+          <li class=""><%= link_to t(".book"), books_path %></li>
+          <li class=""><%= link_to t(".review"), "#" %></li>
+          <li class=""><%= link_to t(".contact"), "#" %></li>
         </ul>
-        <%= form_for "#", class: "navbar-search pull-left",
-          html: {style: "display: inline"} do |f| %>
-        <%= f.text_field :search, placeholder: t("static_pages.search"),
-          class: "search-query span2", style: "margin: 5px 0px; width: 270px;" %>
-        <div class="btn-group" id="search_for">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-            <%= t "static_pages.search_for" %>
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" role="menu">
-            <li><%= f.submit "Title", name: "Title", class: "sub_search" %></li>
-            <li><%= f.submit "Category", name: "Category", class: "sub_search" %></li>
-            <li><%= f.submit "Rating", name: "Rating", class: "sub_search" %></li>
-            <li><%= f.submit "Favorite", name: "Favorite", class: "sub_search" %></li>
-          </ul>
-        </div>
-        <% end %>
       </div>
     </div>
   </div>

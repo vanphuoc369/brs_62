@@ -7,6 +7,9 @@
     <div class="span7">
       <h3><%= @user.fullname %></h3>
       <hr class="soft"/>
+      <% if current_user? @user %>
+        <%= link_to t(".edit"), edit_user_path(current_user) %>
+      <% end %>
     </div>
   </div>
 </div>
