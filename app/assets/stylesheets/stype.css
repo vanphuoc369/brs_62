@@ -140,3 +140,16 @@ input.sub_search {
 .category{
   width: 160px;
 }
+.search-query.span2{
+  width: 270px;
+}
+.pagination{
+  width: 100%;
+  display: inline-block;
+}
+.checked{
+    color: yellow;
+}
+.nav.nav-list.rating li a{
+ color: #a7a2a2;
+}
