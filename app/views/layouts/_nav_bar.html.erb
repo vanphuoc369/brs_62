@@ -25,9 +25,9 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-              <li><%= submit_tag "Title", class: "sub_search", name: "search_for" %></li>
-              <li><%= submit_tag "Author", class: "sub_search", name: "search_for" %></li>
-              <li><%= submit_tag "Favorite", class: "sub_search", name: "search_for" %></li>
+              <li><%= submit_tag t("nav_bar.submit_title"), class: "sub_search", name: "search_for" %></li>
+              <li><%= submit_tag t("nav_bar.submit_author"), class: "sub_search", name: "search_for" %></li>
+              <li><%= submit_tag t("nav_bar.submit_favorite"), class: "sub_search", name: "search_for" %></li>
             </ul>
           </div>
         <% end %>

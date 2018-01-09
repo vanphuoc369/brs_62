@@ -16,10 +16,11 @@
   <div class="well well-small">
     <ul class="nav nav-list rating">
       <strong><%= "Rating" %></strong>
-      <% 5.times do |m| %>
+      <%= render_rating %>
+<!--       <% (1..5).each do |m| %>
         <li>
-          <%= link_to books_path(star: m+1) do %>
-            <% 5.times do |n| %>
+          <%= link_to books_path(star: m) do %>
+            <% (1..5).each do |n| %>
               <% if n <= m%>
                 <span class="fa fa-star checked"></span>
               <% else %>
@@ -28,7 +29,7 @@
             <% end %>
           <% end %>
         </li>
-      <% end %>
+      <% end %> -->
       <li> &nbsp;</li>
     </ul>
   </div>

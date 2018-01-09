@@ -6,6 +6,8 @@ class BooksController < ApplicationController
       @title_search = t(".search.title_search_rating", star: params[:star])
     elsif params[:search_for] == "Favorite"
       logged_in_user
+      @books = Book.search_for_favorite(session[:user_id]).paginate page: params[:page],
+        per_page: Settings.books.per_page
     elsif params[:search].blank?
       @books = Book.alpha.paginate page: params[:page],
         per_page: Settings.books.per_page

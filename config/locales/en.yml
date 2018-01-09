@@ -115,6 +115,8 @@ en:
     search:
       title_search: "Find result with "
       title_search_rating: "Find result for %{star} star rating"
+    index:
+      please_log_in: "Vui lòng đăng nhập tài khoản"
   sessions:
     error_log_in: "Sai địa chỉ email hoặc mật khẩu"
     new:
@@ -126,3 +128,7 @@ en:
       remember_me: "Remember me"
       content: "Chưa có tài khoản? %{sign_up_link}"
       link_content: "Đăng ký"
+  nav_bar:
+    submit_title: "Title"
+    submit_author: "Author"
+    submit_favorite: "Favorite"

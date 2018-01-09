@@ -38,3 +38,5 @@ end
   rate = rand (1..5)
   Review.create!(user_id: user_id, book_id: book_id, content: content, rate: rate)
 end
+
+UserBook.create!(user_id: 1, book_id: 1, is_favorite: 1, status: 0)
