@@ -1,0 +1,29 @@
+<div>
+  <div>
+    <ul>
+      <% if @reviews.any? %>
+        <% @reviews.each do |review| %>
+          <div><%= find_user_review review.user_id %></div>
+          <div><%= review.created_at %></div>
+          <div><%= review.content %></div>
+          <div><%= review.rate %></div>
+          <% if logged_in? %>
+            <% if review.user_id == current_user.id %>
+              <div>
+                <%= link_to t(".edit"), "#" %>
+                <%= link_to t(".del"), "#", method: :delete, data: {confirm: t(".confirm")} %>
+              </div>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% else %>
+        <li>
+          <div>
+            <p><%= t ".p" %></p>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <%= will_paginate @reviews %>
+<div>

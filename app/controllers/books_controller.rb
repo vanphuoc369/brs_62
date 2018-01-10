@@ -1,4 +1,8 @@
 class BooksController < ApplicationController
+  before_action :load_book, only: :show
+
+  def new; end
+
   def index
     if params[:star]
       @books = Book.books_rating(params[:star]).paginate page: params[:page],
@@ -21,5 +25,18 @@ class BooksController < ApplicationController
 
   def book_params
     params.permit :search, :search_for
+  end
+
+  def show
+    @reviews = @book.reviews.newest.paginate page: params[:page], per_page: Settings.books.review_per_page
+  end
+
+  private
+
+  def load_book
+    @book = Book.find_by id: params[:id]
+    return if @book
+    flash[:danger] = t ".danger"
+    redirect_to root_path
   end
 end

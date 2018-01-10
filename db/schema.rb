@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180108054730) do
+ActiveRecord::Schema.define(version: 20180103161026) do
 
   create_table "book_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "category_id"
@@ -30,8 +30,6 @@ ActiveRecord::Schema.define(version: 20180108054730) do
     t.text "summary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "price", limit: 24, default: 0.0
-    t.integer "quantity", default: 0
     t.index ["author"], name: "index_books_on_author"
     t.index ["publish_date"], name: "index_books_on_publish_date"
     t.index ["title"], name: "index_books_on_title"
@@ -39,11 +37,11 @@ ActiveRecord::Schema.define(version: 20180108054730) do
 
   create_table "buy_requests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "user_id"
-    t.bigint "book_id"
     t.integer "status", default: 0
+    t.string "title"
+    t.string "author"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["book_id"], name: "index_buy_requests_on_book_id"
     t.index ["user_id"], name: "index_buy_requests_on_user_id"
   end
 
@@ -122,7 +120,6 @@ ActiveRecord::Schema.define(version: 20180108054730) do
 
   add_foreign_key "book_categories", "books"
   add_foreign_key "book_categories", "categories"
-  add_foreign_key "buy_requests", "books"
   add_foreign_key "buy_requests", "users"
   add_foreign_key "comments", "reviews"
   add_foreign_key "comments", "users"

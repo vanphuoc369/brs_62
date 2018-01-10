@@ -1,0 +1,45 @@
+  <%= form_for [@book, @book.reviews.build], method: :post do |f| %>
+  <div>
+    <div>
+      <fieldset class = "rate">
+        <%= f.radio_button :rate, 5, id: "star5_" %>
+        <%= label "star5","", title: "Rất hay", class: "full" %>
+
+        <%= f.radio_button :rate, 4.5, id: "star4half_" %>
+        <%= label "star4half", "", title: "Hay", class: "half" %>
+
+        <%= f.radio_button :rate, 4, id: "star4_" %>
+        <%= label "star4", "","", class: "full" %>
+
+        <%= f.radio_button :rate, 3.5, id: "star3half_" %>
+        <%= label "star3half", "", "", class: "half" %>
+
+        <%= f.radio_button :rate, 3, id: "star3_" %>
+        <%= label "star3", "", "", class: "full" %>
+
+        <%= f.radio_button :rate, 2.5, id: "star2half_" %>
+        <%= label "star2half", "", "", class: "half" %>
+
+        <%= f.radio_button :rate, 2, id: "star2_" %>
+        <%= label "star2", "", "", class: "full" %>
+
+        <%= f.radio_button :rate, 1.5, id: "star1half_" %>
+        <%= label "star1half", "","", class: "half" %>
+
+        <%= f.radio_button :rate, 1, id: "star1_" %>
+        <%= label "star1","", "", class: "full" %>
+
+        <%= f.radio_button :rate, 0.5, id: "starhalf_" %>
+        <%= label "starhalf", "", "", class: "half" %>
+      </fieldset>
+    </div>
+    <div>
+      <%= f.label :content, t(".content") %>
+      <%= f.text_area :content, require: true %>
+    </div>
+    <div>
+      <%= f.button type: "submit", title: t(".title"), name: nil %>
+    </div>
+  </div>
+  <%= hidden_field_tag :book_id, @book.id %>
+<% end %>

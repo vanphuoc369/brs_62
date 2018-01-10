@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get  "/signup", to: "users#new"
   resources :users, except: :destroy
   root "static_pages#home"
-  resources :books
-  resources :reviews, only: :index
+  resources :books do
+    resources :reviews
+  end
 end
