@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :users, except: :destroy
   root "static_pages#home"
   resources :books
+  resources :reviews, only: :index
 end
