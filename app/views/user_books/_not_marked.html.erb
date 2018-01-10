@@ -1,0 +1,17 @@
+<div class="mark_book">
+  <%= form_tag book_user_books_path(@book.id), method: "post", remote: true do %>
+  <%= button_tag(type: "submit", class: "btn_mark", value: "like") do %>
+  <i class="fa fa-heart icon_not_mark" aria-hidden="true" title="mark favorite book">
+  </i>
+  <% end %>
+  <hr class="soft"/>
+  <%= button_tag(type: "submit", class: "btn_mark", value: "reading") do %>
+  <i class="fa fa-eye icon_not_mark" aria-hidden="true" title="mark reading book"></i>
+  <% end %>
+    <hr class="soft"/>
+  <%= button_tag(type: "submit", class: "btn_mark", value: "read") do %>
+  <i class="fa fa-check-circle icon_not_mark" aria-hidden="true" title="mark read book"></i>
+  </i>
+  <% end %>
+  <% end %>
+</div>

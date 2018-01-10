@@ -10,12 +10,14 @@ User.create!(fullname: "Quang Dũng", email: "nguyenquangdung5560@gmail.com", pa
 end
 
 20.times do |n|
-	title = "Title-#{n+1}"
-	author = "Author-#{n+1}"
-	publish_date = Time.zone.now
-	summary = "Summary-of-book #{n+1}"
-	Book.create!(title: title, author: author, publish_date: publish_date,
-		number_of_pages: 50, image: "d.jpg", summary: summary, price: 50, quantity: 3)
+  title = "Title-#{n+1}"
+  author = "Author-#{n+1}"
+  publish_date = Time.zone.now
+  summary = "Summary-of-book #{n+1}"
+  str = "abcdefghiklm"
+  img = str[rand(0..str.length-1)] + ".jpg"
+  Book.create!(title: title, author: author, publish_date: publish_date,
+    number_of_pages: 50, image: img, summary: summary, price: 50, quantity: 3)
 end
 
 vanhoc = Category.create!(name: "Sách văn học", type_id: 0)
@@ -29,4 +31,13 @@ end
 3.times do |n|
   name = "Thể loại lịch sử #{n+1}"
   Category.create!(name: name, type_id: 2)
+end
+
+20.times do |n|
+  user_id = 1
+  book_id = rand(1..20)
+  is_favorite = rand(0..1)
+  status = rand(0..2)
+  UserBook.create!(user_id: user_id, book_id: book_id, is_favorite: is_favorite,
+    status: status)
 end

@@ -1,0 +1,34 @@
+<div class="mark_book">
+  <%= form_tag book_user_book_path(@book.id, @user_book.id), method: "patch", remote: true do %>
+  <%= hidden_field_tag :status, @user_book.status %>
+  <%= hidden_field_tag :is_favorite, @user_book.is_favorite %>
+  <%= button_tag(type: "submit", class: "btn_mark", value: "like") do %>
+  <i class="fa fa-heart icon_mark<%= @user_book.is_favorite %>" aria-hidden="true" title="mark favorite book">
+  </i>
+  <% end %>
+  <% if @user_book.is_favorite == true %>
+  <span class="alert-success" >
+    Ban da danh dau sach ua thich
+  </span><br>
+  <% end %>
+  <hr class="soft"/>
+  <%= button_tag(type: "submit", class: "btn_mark", value: "reading") do %>
+  <i class="fa fa-eye icon_mark<%= @user_book.status %>" aria-hidden="true" title="mark reading book"></i>
+  <% end %>
+  <% if @user_book.status == 1 %>
+  <span class="alert-success">
+    Ban da danh dau sach dang doc
+  </span>
+  <% end %>
+    <hr class="soft"/>
+  <%= button_tag(type: "submit", class: "btn_mark", value: "read") do %>
+  <i class="fa fa-check-circle icon_mark<%= @user_book.status %>" aria-hidden="true" title="mark read book"></i>
+  </i>
+  <% end %>
+  <% if @user_book.status == 2 %>
+  <span class="alert-success">
+    Ban da danh dau sach da doc
+  </span>
+  <% end %>
+  <% end %>
+</div>
