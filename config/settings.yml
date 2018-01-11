@@ -6,6 +6,7 @@ users:
   page_size: 10
 books:
   per_page: 9
+  review_per_page: 5
 password:
   min_size: 6
   reset_expired: 2
@@ -13,3 +14,5 @@ sessions:
   remember: "1"
 cart_count: 2
 cart_price: "$448.42"
+min_rate: 0
+max_rate: 5

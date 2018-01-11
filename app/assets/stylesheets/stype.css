@@ -148,8 +148,49 @@ input.sub_search {
   display: inline-block;
 }
 .checked{
-    color: yellow;
+  color: yellow;
 }
 .nav.nav-list.rating li a{
  color: #a7a2a2;
+}
+.fs-rate{
+  margin: 0;
+  padding: 0;
+}
+.fs-rate label{
+  margin: 0;
+  padding: 0;
+}
+.rate {
+  border: none;
+  float: left;
+}
+.rate > input{
+  display: none;
+}
+.rate > label:before{
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+.rate > .half:before{
+  content: "\f089";
+  position: absolute;
+}
+.rate > label{
+  color: #ddd;
+ float: right;
+}
+.rate > input:checked ~ label,
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label{
+  color: #FFD700;
+}
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label{
+  color: #FFED85;
 }

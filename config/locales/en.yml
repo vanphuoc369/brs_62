@@ -112,6 +112,7 @@ en:
     all_books: "All books"
     title_h3: "Show book details"
     list_books: "List Books"
+    danger: "Không tìm thấy sách"
     search:
       title_search: "Find result with "
       title_search_rating: "Find result for %{star} star rating"
@@ -132,3 +133,18 @@ en:
     submit_title: "Title"
     submit_author: "Author"
     submit_favorite: "Favorite"
+  reviews:
+    success: "Đăng bài thành công"
+    fail: "Đăng bài thất bại"
+    danger: "Không tìm thấy sách"
+    reviewed: "Chỉ được đánh gía 1 lần"
+    review:
+      edit: "Chỉnh sửa"
+      del: "Xóa"
+      confirm: "Are you sure?"
+      p: "Không có bài đánh gía nào"
+    review_form:
+      content: "Nội dung"
+      title: "Thêm"
+    new:
+      h1: "Thêm đánh giá"
