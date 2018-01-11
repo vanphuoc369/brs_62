@@ -10,12 +10,14 @@ User.create!(fullname: "Quang Dũng", email: "nguyenquangdung5560@gmail.com", pa
 end
 
 20.times do |n|
-	title = "Title-#{n+1}"
-	author = "Author-#{n+1}"
-	publish_date = Time.zone.now
-	summary = "Summary-of-book #{n+1}"
-	Book.create!(title: title, author: author, publish_date: publish_date,
-		number_of_pages: 50, image: "d.jpg", summary: summary)
+  title = "Title-#{n+1}"
+  author = "Author-#{n+1}"
+  publish_date = Time.zone.now
+  summary = "Summary-of-book #{n+1}"
+  str = "abcdefghiklm"
+  img = str[rand(0..str.length-1)] + ".jpg"
+  Book.create!(title: title, author: author, publish_date: publish_date,
+    number_of_pages: 50, image: img, summary: summary)
 end
 
 vanhoc = Category.create!(name: "Sách văn học", type_id: 0)

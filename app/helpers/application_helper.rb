@@ -14,16 +14,16 @@ module ApplicationHelper
   def load_star m
     result = []
     (1..5).each do |n|
-      if n <= m
-        result << (content_tag :span, class: "fa fa-star checked" do
-          "&nbsp;".html_safe
-        end)
-      else
-        result << (content_tag :span, class: "fa fa-star" do
-           "&nbsp;".html_safe
-        end)
-      end
+      result << load_span_tag(m, n)
     end
-     safe_join result
+    safe_join result
+  end
+
+  def load_span_tag m, n
+    if n <= m
+      content_tag :span, nil, class: "fa fa-star checked w-space"
+    else
+      content_tag :span, nil, class: "fa fa-star w-space"
+    end
   end
 end

@@ -118,6 +118,8 @@ en:
       title_search_rating: "Find result for %{star} star rating"
     index:
       please_log_in: "Vui lòng đăng nhập tài khoản"
+    show:
+      p: "Điểm đánh giá: %{average} / 5 (%{count} lượt đánh giá)"
   sessions:
     error_log_in: "Sai địa chỉ email hoặc mật khẩu"
     new:
@@ -138,13 +140,93 @@ en:
     fail: "Đăng bài thất bại"
     danger: "Không tìm thấy sách"
     reviewed: "Chỉ được đánh gía 1 lần"
+    update_success: "Cập nhập thành công"
+    update_error: "Cập nhập thất bại"
+    destroy_success: "Xóa thành công"
+    destroy_error: "Xóa thất bại"
     review:
       edit: "Chỉnh sửa"
       del: "Xóa"
       confirm: "Are you sure?"
       p: "Không có bài đánh gía nào"
+      h3: "Đánh giá bởi: %{username}"
+      h5_update: "Đã được chỉnh sửa %{time} trước"
+      h5_create: "Đã đăng %{time} trước"
     review_form:
       content: "Nội dung"
       title: "Thêm"
+      h2: "Đánh giá"
+      label: "Đánh giá"
+      title5: "Rất hay"
+      title4half: "Hay"
+      title4: "Khá hay"
+      title3half: "Được"
+      title3: "Tạm được"
+      title2half: "Bình thường"
+      title2: "Không hay"
+      title1half: "Nhàm chán"
+      title1: "Dở"
+      titlehalf: "Dợ tệ"
     new:
       h1: "Thêm đánh giá"
+    create:
+      please_log_in: "Vui lòng đăng nhập tài khoản"
+    edit:
+      h2: "Cập nhập đánh giá"
+      label: "Đánh giá"
+      title5: "Rất hay"
+      title4half: "Hay"
+      title4: "Khá hay"
+      title3half: "Được"
+      title3: "Tạm được"
+      title2half: "Bình thường"
+      title2: "Không hay"
+      title1half: "Nhàm chán"
+      title1: "Dở"
+      titlehalf: "Dợ tệ"
+      title: "Cập nhập"
+      content: "Nội dung"
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "nửa phút"
+      less_than_x_seconds:
+        one:   "gần 1 giây"
+        other: "gần %{count} giây"
+      x_seconds:
+        one:   "1 giây"
+        other: "%{count} giây"
+      less_than_x_minutes:
+        one:   "gần 1 phút"
+        other: "gần %{count} phút"
+      x_minutes:
+        one:   "1 phút"
+        other: "%{count} phút"
+      about_x_hours:
+        one:   "khoảng 1 giờ"
+        other: "khoảng %{count} giờ"
+      x_days:
+        one:   "1 ngày"
+        other: "%{count} ngày"
+      about_x_months:
+        one:   "khoảng 1 tháng"
+        other: "khoảng %{count} tháng"
+      x_months:
+        one:   "1 tháng"
+        other: "%{count} tháng"
+      about_x_years:
+        one:   "khoảng 1 năm"
+        other: "khoảng %{count} năm"
+      over_x_years:
+        one:   "hơn 1 năm"
+        other: "hơn %{count} năm"
+      almost_x_years:
+        one:   "gần 1 năm"
+        other: "gần %{count} năm"
+    prompts:
+      year:   "Năm"
+      month:  "Tháng"
+      day:    "Ngày"
+      hour:   "Giờ"
+      minute: "Phút"
+      second: "Giây"

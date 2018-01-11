@@ -1,7 +1,9 @@
 <% provide :title, @book.title %>
+<p><%= t ".p", average: @average, count: @count_rate %></p>
 <div>
   <%= render "reviews/review" %>
 </div>
+<hr>
 <div>
   <%= render "reviews/review_form" %>
 </div>
