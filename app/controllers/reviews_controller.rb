@@ -2,6 +2,7 @@ class ReviewsController < ApplicationController
   before_action :logged_in_user, :find_book
   before_action :check_review, only: :create
   before_action :find_review, only: %i(destroy edit update)
+
   def new; end
 
   def create

@@ -44,6 +44,7 @@ en:
       book: "Sách"
       review: "Đánh giá"
       contact: "Liên hệ"
+      request: "Yêu cầu"
     left_body:
       type1: "Sách văn học"
       type11: "Tiểu thuyết tình cảm"
@@ -202,6 +203,41 @@ en:
       titlehalf: "Dợ tệ"
       title: "Cập nhập"
       content: "Nội dung"
+  buy_requests:
+    denied: "Truy cập bị từ chối"
+    request_not_found: "Không tìm thấy yêu cầu"
+    user_not_found: "Không tìm thấy người dùng"
+    new:
+      title: "Yêu cầu sách"
+      h3: "Gửi yêu cầu thêm sách mới"
+      request: "Thông tin sách yêu cầu"
+      title_book: "Tên sách"
+      author: "Tác giả"
+      submit: "Gửi yêu cầu"
+    index:
+      title: "Yêu cầu"
+      h2: "Danh sách yêu cầu "
+      small: "%{count} yêu cầu"
+      title_book: "Tên sách"
+      author: "Tác giả"
+      created_at: "Ngày gửi"
+      status: "Trạng thái"
+      destroy: "Hủy"
+      waiting: "Đang chờ"
+      success: "Đã duyệt"
+      cancel: "Từ chối"
+      del: "Xóa"
+      confirm: "Xóa yêu cầu?"
+      create: "Thêm yêu cầu"
+    create:
+      create_success: "Thêm thành công"
+      requested: "Yêu cầu bị trùng"
+    destroy:
+      destroy_success: "Xóa thành công"
+      destroy_error: "Xóa thất bại"
+  request_books:
+    index:
+      please_log_in: "Vui lòng đăng nhập tài khoản"
 
   favorited: "Đã thích"
   reading: "Đang đọc"

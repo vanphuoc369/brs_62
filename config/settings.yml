@@ -43,3 +43,11 @@ value_btn_reading: "reading"
 value_btn_read: "read"
 favorite: "true"
 not_favorite: "false"
+buy_request:
+  per_page: 5
+
+request_waiting: 0
+request_waiting_in_words: "Đang chờ"
+request_success: 1
+request_success_in_words: "Đã duyệt"
+request_cancel_in_words: "Từ chối"

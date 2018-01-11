@@ -20,6 +20,7 @@ class User < ApplicationRecord
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :fullname, presence: true, length: {maximum: Settings.fullname.max_size}
   validates :password, presence: true, length: {minimum: Settings.password.min_size}, allow_nil: true
+  validates_associated :buy_requests
 
   before_save :downcase_email
 
