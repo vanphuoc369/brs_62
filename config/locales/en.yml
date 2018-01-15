@@ -69,6 +69,12 @@ en:
       information: "Thông tin cá nhân"
     show:
       edit: "Cập nhập"
+      favorite_book: "Sách yêu thích"
+      timeline: "Dòng thời gian"
+      notify_empty: "Danh sách ưa thích trống"
+      td_title: "Tiêu đề"
+      td_author: "Tác giả"
+      td_publish: "Ngày xuất bản"
 
     edit:
       title: "Cập nhập"

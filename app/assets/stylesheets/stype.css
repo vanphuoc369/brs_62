@@ -274,3 +274,8 @@ input.sub_search {
 .tabWrapper{
   background-color: white;
 }
+.content_table{
+  padding: 15px 0px;
+  margin: 0% 1%;
+  width: 98%;
+}
