@@ -6,7 +6,7 @@ users:
   page_size: 10
 books:
   per_page: 9
-  review_per_page: 5
+  review_per_page: 2
 password:
   min_size: 6
   reset_expired: 2
@@ -16,3 +16,21 @@ cart_count: 2
 cart_price: "$448.42"
 min_rate: 0
 max_rate: 5
+rating:
+  star5: 5
+  star45: 4.5
+  star4: 4
+  star35: 3.5
+  star3: 3
+  star25: 2.5
+  star2: 2
+  star15: 1.5
+  star1: 1
+  starhalf: 0.5
+numstar: 5
+round: 2
+
+max_star: 5
+min_star: 1
+half: 0.5
+full: 1

@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
-  before_action :logged_in_user, :find_book, :check_review, only: :create
-
+  before_action :logged_in_user, :find_book
+  before_action :check_review, only: :create
+  before_action :find_review, only: %i(destroy edit update)
   def new; end
 
   def create
@@ -9,6 +10,26 @@ class ReviewsController < ApplicationController
       flash[:success] = t ".success"
     else
       flash[:danger] = t ".fail"
+    end
+    redirect_to @book
+  end
+
+  def edit; end
+
+  def update
+    if @review.update review_params
+      flash[:success] = ".update_success"
+    else
+      flash[:danger] = t ".update_error"
+    end
+    redirect_to @book
+  end
+
+  def destroy
+    if @review.destroy
+      flash[:success] = ".destroy_success"
+    else
+      flash[:danger] = t ".destroy_error"
     end
     redirect_to @book
   end
@@ -35,5 +56,10 @@ class ReviewsController < ApplicationController
 
   def review_params
     params.require(:review).permit :content, :rate, :book_id
+  end
+
+  def find_review
+    @review = Review.find_by id: params[:id]
+    redirect_to root_url if @review.nil?
   end
 end

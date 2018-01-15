@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
     redirect_to root_url unless current_user? @user
   end
 
+  def collection_paginate collection, page, per_page
+    collection.paginate page: page, per_page: per_page
+  end
+
   private
 
   def logged_in_user

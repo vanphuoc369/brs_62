@@ -1,29 +1,32 @@
 <div>
-  <div>
-    <ul>
-      <% if @reviews.any? %>
-        <% @reviews.each do |review| %>
-          <div><%= find_user_review review.user_id %></div>
-          <div><%= review.created_at %></div>
-          <div><%= review.content %></div>
-          <div><%= review.rate %></div>
-          <% if logged_in? %>
-            <% if review.user_id == current_user.id %>
-              <div>
-                <%= link_to t(".edit"), "#" %>
-                <%= link_to t(".del"), "#", method: :delete, data: {confirm: t(".confirm")} %>
-              </div>
-            <% end %>
+  <% if @reviews.any? %>
+    <% @reviews.each do |review| %>
+      <div>
+        <div>
+          <h3><%= t ".h3", username: find_user_review(review.user_id) %> </h3>
+          <% if review_update? review %>
+            <h5><%= t ".h5_update", time: time_ago_in_words(review.updated_at) %></h5>
+          <% else %>
+            <h5><%= t ".h5_create", time: time_ago_in_words(review.created_at) %></h5>
           <% end %>
-        <% end %>
-      <% else %>
-        <li>
+        </div>
+        <div>
+          <span class = "stars" data-rating = <%= review.rate %> data-num-stars = <%= Settings.numstar %></span>
+        </div>
+        <div><%= review.content %></div>
+        <% if logged_in? && correct_user_review?(review) %>
           <div>
-            <p><%= t ".p" %></p>
+            <%= link_to t(".edit"), edit_book_review_path(review.book, review) %>
+            <%= link_to t(".del"), book_review_path(review.book, review),
+              method: :delete, data: {confirm: t(".confirm")} %>
           </div>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% else %>
+    <div>
+      <p><%= t ".p" %></p>
+    </div>
+  <% end %>
   <%= will_paginate @reviews %>
-<div>
+</div>

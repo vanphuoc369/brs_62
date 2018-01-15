@@ -1,6 +1,7 @@
+<% provide :title, @book.title %>
 <div>
   <h2><%= t ".h2" %></h2>
-  <%= form_for [@book, @book.reviews.build], html: {class: "form-horizontal"}, method: :post do |f| %>
+  <%= form_for [@book, @review], html: {class: "form-horizontal"} do |f| %>
     <div class = "control-group">
       <%= f.label :rate, t(".label") %>
       <fieldset class = "rate">

@@ -170,7 +170,7 @@ input.sub_search {
 }
 .rate > label:before{
   margin: 5px;
-  font-size: 1.25em;
+  font-size: 15px;
   font-family: FontAwesome;
   display: inline-block;
   content: "\f005";
@@ -180,7 +180,7 @@ input.sub_search {
   position: absolute;
 }
 .rate > label{
-  color: #ddd;
+  color: #808080;
  float: right;
 }
 .rate > input:checked ~ label,
@@ -193,4 +193,17 @@ input.sub_search {
 .rating > label:hover ~ input:checked ~ label,
 .rating > input:checked ~ label:hover ~ label{
   color: #FFED85;
+}
+.w-space{
+  padding-left: 8px;
+}
+.r{
+  color: orange;
+}
+.ta-review{
+  width: 100%;
+  height: 150px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
