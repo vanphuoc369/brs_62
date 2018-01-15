@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   root "static_pages#home"
   resources :books do
     resources :reviews
+    resources :user_books, only: %i(create update)
   end
 end
