@@ -31,6 +31,7 @@
 
 en:
   hello: "Hello world"
+
   layouts:
     upper_header:
       my_account: "Tài khoản"
@@ -78,6 +79,7 @@ en:
       td_publish: "Ngày xuất bản"
       following: "following"
       followers: "followers"
+      admin: "Đến trang quản lý"
     unfollow:
       submit: "Unfollow"
     follow:
@@ -91,6 +93,7 @@ en:
       pass: "Mật khẩu"
       pass_confirm: "Xác nhận mật khẩu"
       submit: "Cập nhập"
+
   shared:
     error_messages:
       error_msg: "The form contains "
@@ -115,6 +118,7 @@ en:
     search: "Search"
     search_for: "Search for"
     btn_view_all: "View all books"
+
   footer:
     Address: "Address"
     addr: "255-257 Hùng Vương - Thanh Khê - Đà Nẵng."
@@ -125,6 +129,7 @@ en:
     content: "If you love to read, at some point you will want to share a book you love with others.
       You may already do this by talking about books with friends."
     copyright: "Copyright &copy; 2018 "
+
   books:
     all_books: "All books"
     title_h3: "Show book details"
@@ -158,10 +163,12 @@ en:
       remember_me: "Remember me"
       content: "Chưa có tài khoản? %{sign_up_link}"
       link_content: "Đăng ký"
+
   nav_bar:
     submit_title: "Title"
     submit_author: "Author"
     submit_favorite: "Favorite"
+
   reviews:
     success: "Đăng bài thành công"
     fail: "Đăng bài thất bại"
@@ -254,9 +261,31 @@ en:
   read: "Đã đọc"
 
   admin:
+    layouts:
+      nav_bar:
+        logout: "Đăng xuất"
     static_pages:
+      access_denied: "Bạn không có quyền truy cập vào trang này"
       index:
         title: "Quản lý"
+        please_log_in: "Vui lòng đăng nhập tài khoản"
+    categories:
+      index:
+        home: "Trang chủ"
+        categories: "Thể loại"
+        list_cat: "Danh sách các thể loại sách"
+        p: "Bảng thể loại"
+        add: "Thêm danh mục"
+      edit:
+        name: "Tên thể loại"
+        parent_name: "Thể loại gốc"
+        edit_cat: "Cập nhập"
+        categories: "Thể loại"
+      new:
+        name: "Tên thể loại"
+        parent_name: "Thể loại gốc"
+        add_cat: "Thêm"
+        categories: "Thể loại"
     layouts:
       nav_bar:
         root: "Book Review System"

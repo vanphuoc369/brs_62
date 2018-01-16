@@ -30,6 +30,9 @@
       </div>
       <% if current_user? @user %>
         <%= link_to t(".edit"), edit_user_path(current_user) %>
+        <% if current_user.is_admin? %>
+          <%= link_to t(".admin"), admin_root_path %>
+        <% end %>
       <% end %>
     </div>
   </div>

@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180103161026) do
+ActiveRecord::Schema.define(version: 20180117104314) do
+
+  create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
+    t.integer "type_id"
+    t.string "type_activity"
+    t.string "content_action"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_activities_on_user_id"
+  end
 
   create_table "book_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "category_id"
@@ -64,11 +74,11 @@ ActiveRecord::Schema.define(version: 20180103161026) do
   end
 
   create_table "likes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "type_activity"
     t.bigint "user_id"
-    t.integer "activity_id"
+    t.bigint "activity_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["activity_id"], name: "index_likes_on_activity_id"
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
@@ -118,11 +128,13 @@ ActiveRecord::Schema.define(version: 20180103161026) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "activities", "users"
   add_foreign_key "book_categories", "books"
   add_foreign_key "book_categories", "categories"
   add_foreign_key "buy_requests", "users"
   add_foreign_key "comments", "reviews"
   add_foreign_key "comments", "users"
+  add_foreign_key "likes", "activities"
   add_foreign_key "likes", "users"
   add_foreign_key "reviews", "books"
   add_foreign_key "reviews", "users"

@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get "/request_books", to: "request_books#index"
   namespace :admin do
     root "static_pages#index"
+    resources :users
+    resources :categories
   end
   resources :relationships, only: %i(create destroy)
 end
