@@ -4,6 +4,8 @@ email:
   max_size: 80
 users:
   page_size: 10
+comments:
+  page_size: 5
 books:
   per_page: 9
   review_per_page: 2

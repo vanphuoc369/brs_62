@@ -1,34 +1,41 @@
 class ReviewsController < ApplicationController
-  before_action :logged_in_user, :find_book
+  before_action :logged_in_user, except: :show
+  before_action :find_book
   before_action :check_review, only: :create
-  before_action :find_review, only: %i(destroy edit update)
+  before_action :find_review, except: %i(new create)
 
-  def new; end
+  def new
+    @review = @book.reviews.build
+  end
+
+  def show
+    find_comments @review
+  end
 
   def create
     @review = current_user.reviews.build review_params
     if @book.reviews << @review
       flash[:success] = t ".success"
+      redirect_to @book
     else
-      flash[:danger] = t ".fail"
+      render :new
     end
-    redirect_to @book
   end
 
   def edit; end
 
   def update
-    if @review.update review_params
-      flash[:success] = ".update_success"
+    if @review.update_attributes review_params
+      flash[:success] = t ".update_success"
+      redirect_to @book
     else
-      flash[:danger] = t ".update_error"
+      render :edit
     end
-    redirect_to @book
   end
 
   def destroy
     if @review.destroy
-      flash[:success] = ".destroy_success"
+      flash[:success] = t ".destroy_success"
     else
       flash[:danger] = t ".destroy_error"
     end
@@ -62,5 +69,10 @@ class ReviewsController < ApplicationController
   def find_review
     @review = Review.find_by id: params[:id]
     redirect_to root_url if @review.nil?
+  end
+
+  def find_comments review
+    @comments = review.comments.paginate page: params[:page], per_page: Settings.comments.page_size
+    return @notify_comment_empty = t(".notify_comment_empty") if @comments.empty?
   end
 end

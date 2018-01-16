@@ -141,7 +141,6 @@ en:
     index:
       please_log_in: "Vui lòng đăng nhập tài khoản"
     show:
-      p: "%{average} / 5 (%{count} lượt đánh giá)"
       author: "Tác giả: "
       publish: "Ngày xuất bản: "
       rating: "Đánh giá: "
@@ -151,7 +150,8 @@ en:
       mark_fail: "Cập nhật thất bại"
       notify_user_book: "Sách chưa đánh dấu. Click vào icon để đánh dấu sách"
       not_found_book: "Không tìm thấy sách"
-
+      p: " %{average} / 5 (%{count} lượt đánh giá)"
+      add_review: "Viết bài đánh giá"
   sessions:
     error_log_in: "Sai địa chỉ email hoặc mật khẩu"
     new:
@@ -182,10 +182,12 @@ en:
       edit: "Chỉnh sửa"
       del: "Xóa"
       confirm: "Are you sure?"
-      p: "Không có bài đánh gía nào"
+      p: "Không có bài đánh giá nào"
       h3: "Đánh giá bởi: %{username}"
       h5_update: "Đã được chỉnh sửa %{time} trước"
       h5_create: "Đã đăng %{time} trước"
+      like: "Thích"
+      detail: "Chi tiết"
     review_form:
       content: "Nội dung"
       title: "Thêm"
@@ -203,8 +205,14 @@ en:
       titlehalf: "Dợ tệ"
     new:
       h1: "Thêm đánh giá"
+      h2: "Đánh giá sách: %{book}"
+      title: "Đánh giá"
+      label: "Đánh giá"
+      content: "Nội dung"
+      please_log_in: "Vui lòng đăng nhập tài khoản"
     create:
       please_log_in: "Vui lòng đăng nhập tài khoản"
+      reviewed: "Bạn đã đánh giá sách này trước đó"
     edit:
       h2: "Cập nhập đánh giá"
       label: "Đánh giá"
@@ -220,6 +228,10 @@ en:
       titlehalf: "Dợ tệ"
       title: "Cập nhập"
       content: "Nội dung"
+    show:
+      by: "Đánh giá bởi: %{fullname}"
+      notify_comment_empty: "Chưa có comment nào cho bài đánh giá."
+
   buy_requests:
     denied: "Truy cập bị từ chối"
     request_not_found: "Không tìm thấy yêu cầu"
@@ -255,6 +267,28 @@ en:
   request_books:
     index:
       please_log_in: "Vui lòng đăng nhập tài khoản"
+
+  comments:
+    h5_update: "Update comment:"
+    h5_comment: "Comment:"
+    edit: "Chỉnh sửa"
+    del: "Xóa"
+    confirm: "Bạn có muốn xóa comment này không ?"
+    time_update: "Đã được chỉnh sửa %{time} trước"
+    time_create: "Đã đăng %{time} trước"
+    destroy:
+      destroy_success: "Xóa thành công"
+      destroy_error: "Xóa thất bại"
+    create:
+      fail: "Đăng bài thất bại"
+      success: "Đăng bài thành công"
+      notify: "Không tìm thấy bài đánh giá"
+    update:
+      update_success: "Cập nhập thành công"
+      update_error: "Cập nhập thất bại"
+      btn_update: "Update"
+      btn_post: "Post"
+      not_found_comment: "Không tìm thấy bình luận"
 
   favorited: "Đã thích"
   reading: "Đang đọc"

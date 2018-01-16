@@ -1,0 +1,9 @@
+<h5><%= t "comments.h5_update" %></h5>
+<%= form_for [@book, @review, @comment], html: {class: "form-horizontal content_cmt"} do |f| %>
+  <div class = "control-group">
+    <%= f.text_area :content, require: true, class: "ta-review cmt" %>
+  </div>
+  <div class = "control-group">
+    <%= f.button t("comments.update.btn_update"), class: "shopBtn" %>
+  </div>
+<% end %>

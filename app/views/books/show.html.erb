@@ -44,7 +44,7 @@
         </div>
         <hr>
         <div>
-          <%= render "reviews/review_form" %>
+          <%= link_to t(".add_review"), new_book_review_path(@book.id), class: "shopBtn" %>
         </div>
       </div>
     </div>
