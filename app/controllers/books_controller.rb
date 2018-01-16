@@ -54,7 +54,7 @@ class BooksController < ApplicationController
   end
 
   def search_title_and_author
-    @books = Book.search  params[:search], params[:search_for]
+    @books = Book.search params[:search], params[:search_for]
     @books = collection_paginate @books, params[:page], Settings.books.per_page
     @title_search = t(".search.title_search") + "'#{params[:search]}'"
   end

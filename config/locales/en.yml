@@ -207,6 +207,25 @@ en:
   reading: "Đang đọc"
   read: "Đã đọc"
 
+  admin:
+    static_pages:
+      index:
+        title: "Quản lý"
+    layouts:
+      nav_bar:
+        root: "Book Review System"
+        home: "Trang chủ"
+        manage_user: "Quản lý người dùng"
+        manage_book: "Quản lý sách"
+        manage_category: "Quản lý thể loại sách"
+        logout: "Đăng xuất"
+      footer:
+        copy: "Copyright © Your Website 2017"
+        leave: "Thoát?"
+        logout_content: "Đăng xuất"
+        cancel: "Hủy"
+        logout: "Đăng xuất"
+
   datetime:
     distance_in_words:
       half_a_minute: "nửa phút"
