@@ -3,7 +3,7 @@
   <% @books.each do |book| %>
   <li class="book">
     <div class="thumbnail">
-      <%= link_to image_tag( book.image, class: "img_book"), "#" %>
+      <%= link_to image_tag( book.image, class: "img_book"), book_path(book.id) %>
       <div class="caption">
         <h5>
           <button class="fa fa-heart-o"></button>

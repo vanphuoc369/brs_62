@@ -34,3 +34,12 @@ max_star: 5
 min_star: 1
 half: 0.5
 full: 1
+read: 2
+reading: 1
+status_read: "2"
+status_reading: "1"
+value_btn_like: "like"
+value_btn_reading: "reading"
+value_btn_read: "read"
+favorite: "true"
+not_favorite: "false"

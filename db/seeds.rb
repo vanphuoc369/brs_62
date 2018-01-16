@@ -41,4 +41,11 @@ end
   Review.create!(user_id: user_id, book_id: book_id, content: content, rate: rate)
 end
 
-UserBook.create!(user_id: 1, book_id: 1, is_favorite: 1, status: 0)
+20.times do |n|
+  user_id = 1
+  book_id = rand(1..20)
+  is_favorite = rand(0..1)
+  status = rand(0..2)
+  UserBook.create!(user_id: user_id, book_id: book_id, is_favorite: is_favorite,
+    status: status)
+end

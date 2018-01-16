@@ -20,6 +20,7 @@ class BooksController < ApplicationController
   end
 
   def show
+    find_book_mark params[:id], current_user.id
     @reviews = @book.reviews.newest
     @reviews = collection_paginate @reviews, params[:page], Settings.books.review_per_page
     if @book.reviews.blank?
@@ -62,5 +63,12 @@ class BooksController < ApplicationController
     @books = Book.alpha
     @books = collection_paginate @books, params[:page], Settings.books.per_page
     @title_search = t ".all_books"
+  end
+
+  def find_book_mark book_id, user_id
+    @user_book = UserBook.find_by(book_id: book_id, user_id: user_id) if logged_in?
+    if @user_book.nil?
+      @notify_user_book = t ".notify_user_book"
+    end
   end
 end

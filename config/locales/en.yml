@@ -119,7 +119,17 @@ en:
     index:
       please_log_in: "Vui lòng đăng nhập tài khoản"
     show:
-      p: "Điểm đánh giá: %{average} / 5 (%{count} lượt đánh giá)"
+      p: "%{average} / 5 (%{count} lượt đánh giá)"
+      author: "Tác giả: "
+      publish: "Ngày xuất bản: "
+      rating: "Đánh giá: "
+      summary: "Tóm tắt"
+      rate: "Đánh giá"
+      notify_log_to_mark: "Đăng nhập để sử dụng tính năng đánh dấu sách"
+      mark_fail: "Cập nhật thất bại"
+      notify_user_book: "Sách chưa đánh dấu. Click vào icon để đánh dấu sách"
+      not_found_book: "Không tìm thấy sách"
+
   sessions:
     error_log_in: "Sai địa chỉ email hoặc mật khẩu"
     new:
@@ -186,6 +196,10 @@ en:
       titlehalf: "Dợ tệ"
       title: "Cập nhập"
       content: "Nội dung"
+
+  favorited: "Đã thích"
+  reading: "Đang đọc"
+  read: "Đã đọc"
 
   datetime:
     distance_in_words:

@@ -1,9 +1,52 @@
 <% provide :title, @book.title %>
-<p><%= t ".p", average: @average, count: @count_rate %></p>
-<div>
-  <%= render "reviews/review" %>
-</div>
-<hr>
-<div>
-  <%= render "reviews/review_form" %>
+<div class="well well-small">
+  <div class="row-fluid">
+    <div class="span5">
+      <%= image_tag("#{@book.image}", class: "img_detail_book") %>
+    </div>
+    <div class="span7">
+      <p id="book_id" hidden="true"><%= @book.id %></p>
+      <h3><%= @book.title %></h3>
+      <hr class="soft"/>
+      <h5 class="label_detail_book"><%= t ".author" %></h5>
+      <span><%= @book.author %></span>
+      <br>
+      <br>
+      <h5 class="label_detail_book"><%= t ".publish" %></h5>
+      <span><%= @book.publish_date.strftime("%d/%m/%Y") %></span>
+      <br>
+      <br>
+      <h5 class="label_detail_book"><%= t ".rating" %></h5>
+      <span><%= t ".p", average: @average, count: @count_rate %></span>
+      <hr class="soft"/>
+      <div id="mark_book">
+        <%= render "user_books/mark_book" %>
+      </div>
+    </div>
+  </div>
+  <hr class="softn clr"/>
+  <ul id="productDetail" class="nav nav-tabs mytab">
+    <li class="active"><a href="#home" data-toggle="tab">
+      <%= t ".summary" %>
+    </a></li>
+    <li class=""><a href="#profile" data-toggle="tab">
+      <%= t ".rate" %>
+    </a></li>
+  </ul>
+  <div id="myTabContent" class="tab-content tabWrapper">
+    <div class="tab-pane fade active in" id="home">
+      <p class="content_summary"><%= @book.summary %></p>
+    </div>
+    <div class="tab-pane fade" id="profile">
+      <div class="row-fluid content_review">
+        <div>
+          <%= render "reviews/review" %>
+        </div>
+        <hr>
+        <div>
+          <%= render "reviews/review_form" %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
