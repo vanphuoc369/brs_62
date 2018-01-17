@@ -32,3 +32,7 @@ $(document).ready(function(){
   }
   $('.stars').stars();
 });
+
+$(document).ready(function() {
+  $('#my_table').DataTable();
+});

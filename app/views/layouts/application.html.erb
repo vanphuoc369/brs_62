@@ -4,14 +4,12 @@
     <title><%= yield(:title) %> | <%= t "application.title" %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
-
     <%= stylesheet_link_tag "//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" %>
-
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
-
     <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" %>
-
     <%= javascript_include_tag "https://code.jquery.com/jquery-3.2.1.slim.min.js" %>
+    <%= stylesheet_link_tag "https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css" %>
+    <%= javascript_include_tag "https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js" %>
   </head>
   <body>
     <%= render "layouts/upper_header" %>

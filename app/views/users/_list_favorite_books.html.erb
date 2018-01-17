@@ -1,0 +1,18 @@
+<div class="row-fluid content_table">
+  <% if @books.any? %>
+    <table id="my_table" class="table table-striped table-bordered" cellspacing="0">
+      <thead>
+        <tr>
+          <th><%= t "users.show.td_title" %></th>
+          <th><%= t "users.show.td_author" %></th>
+          <th><%= t "users.show.td_publish" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render "body_table" %>
+      </tbody>
+    </table>
+  <% else %>
+    <%= @notify_empty %>
+  <% end %>
+</div>
