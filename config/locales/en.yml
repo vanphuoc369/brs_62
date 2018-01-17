@@ -76,6 +76,12 @@ en:
       td_title: "Tiêu đề"
       td_author: "Tác giả"
       td_publish: "Ngày xuất bản"
+      following: "following"
+      followers: "followers"
+    unfollow:
+      submit: "Unfollow"
+    follow:
+      submit: "Follow"
 
     edit:
       title: "Cập nhập"
@@ -89,6 +95,10 @@ en:
     error_messages:
       error_msg: "The form contains "
       error: " error"
+    stats:
+      following: "following"
+      followers: "followers"
+
   static_pages:
     title_home: "Home"
     title_popular_book: "Popular Books"
@@ -261,6 +271,16 @@ en:
         logout_content: "Đăng xuất"
         cancel: "Hủy"
         logout: "Đăng xuất"
+
+  following:
+    user_not_found: "Không tìm thấy người dùng"
+    index:
+      title: "Following"
+
+  followers:
+    user_not_found: "Không tìm thấy người dùng"
+    index:
+      title: "Followers"
 
   datetime:
     distance_in_words:

@@ -6,7 +6,28 @@
     </div>
     <div class="span7">
       <h3><%= @user.fullname %></h3>
+      <div class = "followBtn">
+        <%= render "follow_form" if logged_in? %>
+      </div>
       <hr class="soft"/>
+      <div>
+        <% @user ||= current_user %>
+        <div class="stats">
+          <a href="<%= user_following_index_path(@user.id) %>">
+            <strong id="following" class="stat">
+              <%= @user.following.size %>
+            </strong>
+            <%= t ".following" %>
+          </a>
+          <a href="<%= user_followers_index_path(@user.id) %>">
+            <strong id="followers" class="stat">
+              <%= @user.followers.size %>
+            </strong>
+            <%= t ".followers" %>
+          </a>
+        </div>
+
+      </div>
       <% if current_user? @user %>
         <%= link_to t(".edit"), edit_user_path(current_user) %>
       <% end %>
