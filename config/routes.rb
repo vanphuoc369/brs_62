@@ -10,4 +10,7 @@ Rails.application.routes.draw do
     resources :reviews
     resources :user_books, only: %i(create update)
   end
+  namespace :admin do
+    root "static_pages#index"
+  end
 end
