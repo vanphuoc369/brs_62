@@ -28,11 +28,6 @@
             <%= t ".register" %>
           <% end %>
         <% end %>
-        <%= link_to "#" do %>
-          <%= content_tag :span, "", class: "fa fa-shopping-cart" %>
-          <%= t(".item", count: Settings.cart_count) %>
-          <%= content_tag :span, Settings.cart_price, class: "badge badge-warning" %>
-        <% end %>
       </div>
     </div>
   </div>

@@ -1,0 +1,27 @@
+<% provide :title, t(".title") %>
+<h3><%= t ".h3" %></h3>
+<hr class="soft"/>
+<div class="well">
+  <h3><%= t ".request" %></h3>
+  <%= form_for [current_user, @buy_request], html: {class: "form-horizontal"} do |f| %>
+    <%= render "shared/error_messages", object: @buy_request %>
+    <div class = "control-group">
+      <%= f.label :title, t(".title_book"), class: "control-label" %>
+      <div class ="controls">
+        <%= f.text_field :title %>
+      </div>
+    </div>
+    <div class = "control-group">
+      <%= f.label :author, class: "control-label" %>
+      <div class ="controls">
+        <%= f.text_field :author %>
+      </div>
+    </div>
+    <%= hidden_field_tag :user_id, current_user.id %>
+    <div class="control-group">
+      <div class="controls">
+        <%= f.submit t(".submit"), class: "exclusive shopBtn" %>
+      </div>
+    </div>
+  <% end %>
+</div>

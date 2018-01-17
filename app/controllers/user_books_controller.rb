@@ -4,15 +4,15 @@ class UserBooksController < ApplicationController
 
   def create
     if params[:button] == Settings.value_btn_like
-      @user_book= UserBook.new(user_id: current_user.id, book_id: @book.id, is_favorite: true)
+      @user_book = UserBook.new(user_id: current_user.id, book_id: @book.id, is_favorite: true)
     elsif params[:button] == Settings.value_btn_read
-      @user_book= UserBook.new(user_id: current_user.id, book_id: @book.id, status: Settings.read)
+      @user_book = UserBook.new(user_id: current_user.id, book_id: @book.id, status: Settings.read)
     else
-      @user_book= UserBook.new(user_id: current_user.id, book_id: @book.id, status: Settings.reading)
+      @user_book = UserBook.new(user_id: current_user.id, book_id: @book.id, status: Settings.reading)
     end
     if @user_book.save
       respond_to do |format|
-        format.html {redirect_to @user_book, @book}
+        format.html{redirect_to @user_book, @book}
         format.js
       end
     else
@@ -32,7 +32,7 @@ class UserBooksController < ApplicationController
     end
     if @user_book.update_attributes(is_favorite: is_favorite, status: status)
       respond_to do |format|
-        format.html {redirect_to @user_book, @book}
+        format.html{redirect_to @user_book, @book}
         format.js
       end
     else
@@ -45,10 +45,9 @@ class UserBooksController < ApplicationController
 
   def find_book
     @book = Book.find_by id: params[:book_id]
-    unless @book
-      flash[:danger] = t ".not_found_book"
-      redirect_to root_path
-    end
+    return if @book
+    flash[:danger] = t ".not_found_book"
+    redirect_to root_path
   end
 
   def mark_like value_params
