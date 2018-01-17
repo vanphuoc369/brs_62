@@ -15,6 +15,7 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :reviews, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :activities, dependent: :destroy
 
   validates :email, presence: true, length: {maximum: Settings.email.max_size},
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
