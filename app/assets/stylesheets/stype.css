@@ -357,3 +357,28 @@ input.sub_search {
 .clear{
   clear: both
 }
+.stats{
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a{
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid gray;
+    color: gray;
+    &:first-child{
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover{
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong{
+    display: block;
+  }
+}
+.followBtn{
+  float: right;
+}
