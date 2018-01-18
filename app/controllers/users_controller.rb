@@ -13,6 +13,8 @@ class UsersController < ApplicationController
 
   def show
     list_favorite_books params[:id]
+    list_books params[:id], Settings.reading
+    list_books params[:id], Settings.read
   end
 
   def create
@@ -53,6 +55,16 @@ class UsersController < ApplicationController
     @books = Book.search_for_favorite(user_id)
     if @books.empty?
       @notify_empty = t ".notify_empty"
+    end
+  end
+
+  def list_books user_id, status
+    if status == Settings.reading
+      @reading_books = Book.search_for_history(user_id, status)
+      @notify_reading_empty = t "users.notify_reading_empty" if @reading_books.empty?
+    else
+      @read_books = Book.search_for_history(user_id, status)
+      @notify_read_empty = t "users.notify_read_empty" if @read_books.empty?
     end
   end
 end
