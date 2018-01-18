@@ -221,6 +221,11 @@ en:
     create:
       please_log_in: "Vui lòng đăng nhập tài khoản"
       reviewed: "Bạn đã đánh giá sách này trước đó"
+      add_review: "Bạn vừa đánh giá sách %{title} của tác giả %{author}"
+    update:
+      edit_review: "Bạn vừa cập nhập đánh giá sách %{title} của tác giả %{author}"
+    destroy:
+      destroy_review: "Bạn vừa xóa bài đánh giá sách %{title} của tác giả %{author}"
     edit:
       h2: "Cập nhập đánh giá"
       label: "Đánh giá"
@@ -291,17 +296,34 @@ en:
       fail: "Đăng bài thất bại"
       success: "Đăng bài thành công"
       notify: "Không tìm thấy bài đánh giá"
+      add_comment: "Bạn đã bình luận bài đánh gía của %{user}"
     update:
       update_success: "Cập nhập thành công"
       update_error: "Cập nhập thất bại"
       btn_update: "Update"
       btn_post: "Post"
       not_found_comment: "Không tìm thấy bình luận"
+      edit_comment: "Bạn đã chỉnh sửa bình luận bài đánh giá của %{userƯ"
 
   favorited: "Đã thích"
   reading: "Đang đọc"
   read: "Đã đọc"
 
+  user_books:
+    create:
+      like_book: "Bạn vừa thêm %{book} vào danh sách yêu thích"
+      unlike_book: "Bạn vừa xóa %{book} khỏi danh sách yêu thích"
+      read_book: "Bạn vừa đánh dấu đã đọc sách %{book}"
+      unread_book: "Bạn vừa hủy đánh dấu đã đọc sách %{book}"
+      reading_book: "Bạn vừa đánh dấu đang đọc sách %{book}"
+      unreading_book: "Bạn vừa hủy đánh dấu đang đọc sách %{book}"
+    update:
+      like_book: "Bạn vừa thêm %{book} vào danh sách yêu thích"
+      unlike_book: "Bạn vừa xóa %{book} khỏi danh sách yêu thích"
+      read_book: "Bạn vừa đánh dấu đã đọc sách %{book}"
+      unread_book: "Bạn vừa hủy đánh dấu đã đọc sách %{book}"
+      reading_book: "Bạn vừa đánh dấu đang đọc sách %{book}"
+      unreading_book: "Bạn vừa hủy đánh dấu đang đọc sách %{book}"
   admin:
     layouts:
       nav_bar:
@@ -375,6 +397,12 @@ en:
     user_not_found: "Không tìm thấy người dùng"
     index:
       title: "Followers"
+
+  relationships:
+    create:
+      content_follow: "Bạn đang theo dõi "
+    destroy:
+      content_unfollow: "Bạn vừa hủy theo dõi "
 
   datetime:
     distance_in_words:

@@ -15,6 +15,11 @@ class UsersController < ApplicationController
     list_favorite_books params[:id]
     list_books params[:id], Settings.reading
     list_books params[:id], Settings.read
+    if current_user?(@user) || @user.following?(current_user) || current_user.following?(@user)
+      @activities = Activity.by_user @user.id
+    else
+      @activities = Activity.in_public @user.id
+    end
   end
 
   def create

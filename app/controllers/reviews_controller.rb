@@ -15,6 +15,8 @@ class ReviewsController < ApplicationController
   def create
     @review = current_user.reviews.build review_params
     if @book.reviews << @review
+      content = t ".add_review", title: @book.title, author: @book.author
+      new_activity current_user, content, @book.id, Settings.add_review
       flash[:success] = t ".success"
       redirect_to @book
     else
@@ -27,6 +29,8 @@ class ReviewsController < ApplicationController
   def update
     if @review.update_attributes review_params
       flash[:success] = t ".update_success"
+      content = t ".edit_review", title: @book.title, author: @book.author
+      new_activity current_user, content, @book.id, Settings.edit_review
       redirect_to @book
     else
       render :edit
@@ -35,7 +39,9 @@ class ReviewsController < ApplicationController
 
   def destroy
     if @review.destroy
-      flash[:success] = t ".destroy_success"
+      content = t ".destroy_review", title: @book.title, author: @book.author
+      new_activity current_user, content, @book.id, Settings.destroy_review
+      flash[:success] = ".destroy_success"
     else
       flash[:danger] = t ".destroy_error"
     end

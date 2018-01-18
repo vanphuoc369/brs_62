@@ -28,4 +28,12 @@ class ApplicationController < ActionController::Base
     flash[:danger] = t ".please_log_in"
     redirect_to login_url
   end
+
+  def new_activity user, content, type_id, type_activity
+    user.activities.create!(
+      type_id: type_id,
+      type_activity: type_activity,
+      content_action: content
+    )
+  end
 end

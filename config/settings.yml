@@ -62,3 +62,18 @@ parent_name: "Thể loại cha"
 step: 0
 step_plus: 1
 childs_name: "> "
+
+action_follow: "follow"
+action_unfollow: "unfollow"
+add_review: "add_review"
+edit_review: "edit_review"
+destroy_review: "del_review"
+action_favorite: "favorite"
+favorite_false: false
+action_unfavorite: "unfavorite"
+action_read: "read"
+action_reading: "reading"
+action_unreading: "unreading"
+action_unread: "unread"
+action_comment: "add_comment"
+action_edit_comment: "edit_comment"

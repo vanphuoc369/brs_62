@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :buy_requests, except: %i(show edit update)
     get "following/index"
     get "followers/index"
+    resources :activities, only: :create
   end
   root "static_pages#home"
   resources :books do

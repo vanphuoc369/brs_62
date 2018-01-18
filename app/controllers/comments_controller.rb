@@ -9,6 +9,8 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.build comment_params
     if @review.comments << @comment
       flash[:success] = t ".success"
+      content = t ".add_comment", user: current_user.fullname
+      new_activity current_user, content, @comment.id, Settings.action_comment
     else
       flash[:danger] = t ".fail"
     end
@@ -18,6 +20,8 @@ class CommentsController < ApplicationController
   def update
     if @comment.update comment_params
       flash[:success] = t ".update_success"
+      content = t ".edit_comment", user: current_user.fullname
+      new_activity current_user, content, @comment.id, Settings.action_edit_comment
     else
       flash[:danger] = t ".update_error"
     end
