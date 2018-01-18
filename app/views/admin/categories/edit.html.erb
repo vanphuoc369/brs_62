@@ -1,0 +1,39 @@
+<% provide :title, t(".title") %>
+<ol class = "breadcrumb">
+  <li class = "breadcrumb-item">
+    <%= link_to t(".home"), admin_root_path %>
+  </li>
+  <li class = "breadcrumb-item active"><%= t ".categories" %></li>
+</ol>
+<div class = "card mb-3">
+  <div class = "card-header">
+    <i class = "fa fa fa-edit "></i>
+    <%= t ".edit_cat" %>
+  </div>
+  <div class = "card-body">
+    <form>
+      <div class = "form-group">
+        <div class = "col-md-6">
+          <label><%= t ".name" %></label>
+          <input class = "form-control" type = "text">
+        </div>
+      </div>
+      <div class = "form-group">
+        <div class = "col-md-6">
+          <label><%= t ".parent_name" %></label>
+          <select class = "custom-select">
+            <option selected>Open this select menu</option>
+            <option value = "1">One</option>
+            <option value = "2">Two</option>
+            <option value = "3">Three</option>
+          </select>
+        </div>
+      </div>
+      <div class = "form-group">
+        <div class = "col-md-6">
+          <button type = "submit" class = "btn btn-primary"><%= t ".edit_cat" %></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
