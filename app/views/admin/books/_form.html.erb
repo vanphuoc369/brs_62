@@ -1,0 +1,50 @@
+<%= form_for [:admin,@book] do |f| %>
+  <%= render "shared/error_messages", object: @book %>
+  <div class = "form-group">
+    <div class = "col-md-6">
+      <%= f.label :title, t(".book_title") %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+  </div>
+  <div class = "form-group">
+    <div class = "col-md-6">
+      <%= f.label :author, t(".book_author") %>
+      <%= f.text_field :author, class: "form-control" %>
+    </div>
+  </div>
+  <div class = "form-group">
+    <div class = "col-md-6">
+      <%= f.label :publish_date, t(".book_publish") %>
+      <%= f.date_field :publish_date, class: "form-control" %>
+    </div>
+  </div>
+  <div class = "form-group">
+    <div class = "col-md-6">
+      <%= f.label :number_of_pages, t(".book_pages") %>
+      <%= f.number_field :number_of_pages, min: Settings.number_of_pages_min, class: "form-control" %>
+    </div>
+  </div>
+  <div class = "form-group">
+    <div class = "col-md-6">
+      <%= f.label :summary, t(".book_summary") %>
+      <%= f.text_area :summary, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class = "col-md-6">
+    <%= f.label :image, t(".book_image") %>
+      <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png", class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class = "col-md-6">
+      <%= f.label :category_ids, t(".category") %>
+      <%= f.select :category_ids, load_categories,{}, multiple: true, class: "form-control" %>
+    </div>
+  </div>
+  <div class = "form-group">
+    <div class = "col-md-6">
+      <%= f.submit t(".submit"),class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<% provide :title, t(".title") %>
+<ol class = "breadcrumb">
+  <li class = "breadcrumb-item">
+    <%= link_to t(".home"), admin_root_path %>
+  </li>
+  <li class = "breadcrumb-item">
+    <%= link_to t(".books"), admin_books_path %>
+  </li>
+  <li class = "breadcrumb-item active"><%= t ".add_book" %></li>
+</ol>
+<div class = "card mb-3">
+  <div class = "card-header">
+    <i class = "fa fa-plus-circle "></i>
+    <%= t ".add_book" %>
+  </div>
+  <div class = "card-body">
+    <%= render "form" %>
+  </div>
+</div>

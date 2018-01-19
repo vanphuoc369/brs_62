@@ -5,6 +5,12 @@ class Book < ApplicationRecord
   has_many :users, through: :user_books
   has_many :categories, through: :book_categories
 
+  validates :title, presence: true
+  validates :author, presence: true
+  validates :number_of_pages, numericality: {greater_than: Settings.number_of_pages, only_integer: true}
+  validates :publish_date, presence: true
+  validates :summary, presence: true, length: {minimum: Settings.summary}
+
   scope :alpha, ->{order title: :desc}
   scope :search_for_title, ->(text) do
     where("title LIKE ?", "%#{text}%") if text.present?
@@ -23,6 +29,9 @@ class Book < ApplicationRecord
       joins(:user_books).where("user_books.user_id = #{user_id} and user_books.status = #{status}")
     end
   end
+  scope :newest, ->{order created_at: :desc}
+
+  mount_uploader :image, ImageUploader
 
   def self.search text_search, search_for
     if search_for == I18n.t("nav_bar.submit_author")

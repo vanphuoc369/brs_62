@@ -62,3 +62,7 @@ parent_name: "Thể loại cha"
 step: 0
 step_plus: 1
 childs_name: "> "
+admin_books_per_page: 10
+number_of_pages_min: 1
+number_of_pages: 0
+summary: 80
