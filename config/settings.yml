@@ -51,3 +51,12 @@ request_waiting_in_words: "Đang chờ"
 request_success: 1
 request_success_in_words: "Đã duyệt"
 request_cancel_in_words: "Từ chối"
+
+admin_categories_per_page: 5
+admin_parent_category: 0
+max_name_cat: 100
+parent_cat: 0
+parent_name: "Thể loại cha"
+step: 0
+step_plus: 1
+childs_name: "> "
