@@ -365,6 +365,39 @@ en:
         logout_content: "Đăng xuất"
         cancel: "Hủy"
         logout: "Đăng xuất"
+    users:
+      not_found_user: "Không tìm thấy người dùng"
+      tbody_users:
+        confirm: "Bạn có muốn xóa người dùng này không?"
+      title: "Quản lý người dùng"
+      home: "Trang chủ"
+      manage_users: "Quản lý người dùng"
+      list_users: "Danh sách người dùng"
+      add_user: " Thêm người dùng"
+      title_update: "Cập nhật"
+      del: "Xóa"
+      th_name: "Tên người dùng"
+      th_email: "Địa chỉ email"
+      th_action: "Thao tác"
+      empty: "Danh sách người dùng trống."
+      title_create: "Create User"
+      new:
+        h3: "Tạo mới người dùng"
+        submit: "Tạo mới"
+        pass_confirm: "Xác nhận mật khẩu"
+        fullname: "Họ và tên"
+        pass: "Mật khẩu"
+      destroy:
+        del_success: "Xóa người dùng thành công."
+        del_danger: "Xóa người dùng thất bại."
+      update:
+        update_success: "Cập nhật thông tin người dùng thành công."
+      create:
+        new_create: "Tạo mới người dùng thành công."
+      edit:
+        title: "Chỉnh sửa"
+        h3_update: "Cập nhật thông tin"
+        btn_update: "Cập nhật"
 
   following:
     user_not_found: "Không tìm thấy người dùng"
