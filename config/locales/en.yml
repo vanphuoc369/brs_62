@@ -312,22 +312,45 @@ en:
         title: "Quản lý"
         please_log_in: "Vui lòng đăng nhập tài khoản"
     categories:
+      exist: "Thể loại đã tồn tại"
+      category_not_found: "Không tìm thấy thể loại"
+      can_not_delete: "Không thể xóa thể loại gốc"
       index:
         home: "Trang chủ"
         categories: "Thể loại"
         list_cat: "Danh sách các thể loại sách"
         p: "Bảng thể loại"
         add: "Thêm danh mục"
+        id: "ID"
+        name: "Tên thể loại"
+        type_id: "Thể loại cha"
+        created_at: "Ngày khởi tạo"
+        updated_at: "Ngày cập nhập"
+        action: "Chức năng"
+        update: "Cập nhập |"
+        del: "Xóa"
+        confirm: " Xác nhận"
       edit:
         name: "Tên thể loại"
         parent_name: "Thể loại gốc"
         edit_cat: "Cập nhập"
         categories: "Thể loại"
+        type_id: "Thể loại gốc"
       new:
         name: "Tên thể loại"
         parent_name: "Thể loại gốc"
         add_cat: "Thêm"
         categories: "Thể loại"
+        type_id: "Thể loại gốc"
+      create:
+        add_success: "Thêm thành công"
+        add_failed: "Thêm thất bại"
+      update:
+        update_success: "Cập nhập thành công"
+        update_failed: "Cập nhập thất bại"
+      destroy:
+        delete_success: "Xóa thành công"
+        delete_failed: "Xóa thất bại"
     layouts:
       nav_bar:
         root: "Book Review System"

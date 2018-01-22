@@ -3,7 +3,10 @@
   <li class = "breadcrumb-item">
     <%= link_to t(".home"), admin_root_path %>
   </li>
-  <li class = "breadcrumb-item active"><%= t ".categories" %></li>
+  <li class = "breadcrumb-item">
+    <%= link_to t(".categories"), admin_categories_path %>
+  </li>
+  <li class = "breadcrumb-item active"><%= t ".edit_cat" %></li>
 </ol>
 <div class = "card mb-3">
   <div class = "card-header">
@@ -11,29 +14,25 @@
     <%= t ".edit_cat" %>
   </div>
   <div class = "card-body">
-    <form>
+    <%= form_for [:admin, @category] do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
       <div class = "form-group">
         <div class = "col-md-6">
-          <label><%= t ".name" %></label>
-          <input class = "form-control" type = "text">
+          <%= f.label :name, t(".name") %>
+          <%= f.text_field :name, class: "form-control"%>
         </div>
       </div>
       <div class = "form-group">
         <div class = "col-md-6">
-          <label><%= t ".parent_name" %></label>
-          <select class = "custom-select">
-            <option selected>Open this select menu</option>
-            <option value = "1">One</option>
-            <option value = "2">Two</option>
-            <option value = "3">Three</option>
-          </select>
+          <%= f.label :type_id, t(".type_id") %>
+          <%= f.collection_select :type_id, load_parent_cat, :id, :name, {}, class: "custom-select" %>
         </div>
       </div>
       <div class = "form-group">
         <div class = "col-md-6">
-          <button type = "submit" class = "btn btn-primary"><%= t ".edit_cat" %></button>
+          <%= f.submit t(".edit_cat"),class: "btn btn-primary" %>
         </div>
       </div>
-    </form>
+    <% end %>
   </div>
 </div>

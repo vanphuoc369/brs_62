@@ -9,9 +9,41 @@
   <div class = "card-header">
     <i class = "fa fa-list-alt "></i>
     <%= t ".list_cat" %>
-    <%= link_to t(".add"), "#", class: "fa fa-plus addBtn" %>
+    <%= link_to t(".add"), new_admin_category_path, class: "fa fa-plus addBtn" %>
   </div>
   <div class = "card-body">
-    <p><%= t ".p" %></p>
+    <div class = "post-body">
+      <table class="table table-bordered table-condensed">
+        <thead>
+          <tr>
+            <th><%= t ".id" %></th>
+            <th><%= t ".name" %></th>
+            <th><%= t ".type_id" %></th>
+            <th><%= t ".created_at" %></th>
+            <th><%= t ".updated_at" %></th>
+            <th><%= t ".action" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if @categories.any? %>
+            <% @categories.each do |category| %>
+              <tr>
+                <td><%= category.id %></td>
+                <td><%= category.name %></td>
+                <td><%= parent_cat_name category.type_id %></td>
+                <td><%= category.created_at.strftime("%d/%m/%Y") %></td>
+                <td><%= category.updated_at.strftime("%d/%m/%Y") %></td>
+                <td>
+                  <%= link_to t(".update"), edit_admin_category_path(category.id)%>
+                  <%= link_to t(".del"), admin_category_path(category.id),
+                    method: :delete, data: {confirm: t(".confirm")} %>
+                </td>
+              </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+      <%= will_paginate @categories %>
+  </div>
   </div>
 </div>
