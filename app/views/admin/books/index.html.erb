@@ -1,0 +1,61 @@
+<% provide :title, t(".title") %>
+<ol class = "breadcrumb">
+  <li class = "breadcrumb-item">
+    <%= link_to t(".home"), admin_root_path %>
+  </li>
+  <li class = "breadcrumb-item active"><%= t ".books" %></li>
+</ol>
+<div class = "card mb-3">
+  <div class = "card-header">
+    <i class = "fa fa-list-alt "></i>
+    <%= t ".list_books" %>
+    <%= link_to t(".add"), new_admin_book_path, class: "fa fa-plus addBtn" %>
+  </div>
+  <div class = "card-body">
+    <div class = "post-body">
+      <table class="table table-bordered table-condensed">
+        <thead>
+          <tr>
+            <th><%= t ".id" %></th>
+            <th><%= t ".image" %></th>
+            <th><%= t ".title_book" %></th>
+            <th><%= t ".author" %></th>
+            <th><%= t ".categories" %></th>
+            <th><%= t ".pages_number" %></th>
+            <th><%= t ".publish_date" %></th>
+            <th><%= t ".created_at" %></th>
+            <th><%= t ".updated_at" %></th>
+            <th><%= t ".action" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if @books.any? %>
+            <% @books.each do |book| %>
+              <tr>
+                <td><%= book.id %></td>
+                <td><%= image_tag book.image.url %></td>
+                <td><%= book.title %></td>
+                <td><%= book.author %></td>
+                <td>
+                  <% book.categories.each do |cat| %>
+                    <p><%= cat.name %></p>
+                  <% end %>
+                </td>
+                <td><%= book.number_of_pages %></td>
+                <td><%= book.publish_date.strftime("%d/%m/%Y") %></td>
+                <td><%= book.created_at.strftime("%d/%m/%Y") %></td>
+                <td><%= book.updated_at.strftime("%d/%m/%Y") %></td>
+                <td>
+                  <%= link_to t(".update"), edit_admin_book_path(book.id)%> |
+                  <%= link_to t(".del"), admin_book_path(book.id),
+                    method: :delete, data: {confirm: t(".confirm")} %>
+                </td>
+              </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+      <%= will_paginate @categories %>
+  </div>
+  </div>
+</div>

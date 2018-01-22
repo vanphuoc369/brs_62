@@ -387,6 +387,54 @@ en:
         logout_content: "Đăng xuất"
         cancel: "Hủy"
         logout: "Đăng xuất"
+    books:
+      book_not_found: "Không tìm thấy sách"
+      index:
+        title: "Tất cả sách"
+        home: "Trang chủ"
+        books: "Sách"
+        list_books: "Tất cả sách"
+        add: "Thêm sách"
+        id: "ID"
+        image: "Hình ảnh"
+        title_book: "Tên sách"
+        author: "Tác giả"
+        categories: "Thể loại"
+        pages_number: "Số trang"
+        publish_date: "Ngày xuất bản"
+        created_at: "Ngày thêm"
+        updated_at: "Ngày cập nhập"
+        update: "Cập nhập"
+        del: "Xóa"
+        confirm: "Xác nhận"
+        action: "Chức năng"
+      destroy:
+        del_success: "Xóa thành công"
+        del_error: "Xóa thất bại"
+        book_not_found: "Không tìm thấy sách"
+      new:
+        title: "Thêm sách"
+        home: "Trang chủ"
+        books: "Sách"
+        add_book: "Thêm sách"
+      edit:
+        edit_book: "Cập nhập sách"
+      form:
+        book_title: "Tên sách"
+        book_author: "Tác giả"
+        book_publish: "Ngày xuất bản"
+        book_pages: "Số trang"
+        book_summary: "Tóm tắt"
+        book_image: "Hình ảnh"
+        category: "Thể loại"
+        submit: "Xác nhận"
+      create:
+        add_success: "Thêm thành công"
+      update:
+        edit_success: "Cập nhập thành công"
+      destroy:
+        del_success: "Xóa thành công"
+        del_error: "Xóa thất bại"
 
   following:
     user_not_found: "Không tìm thấy người dùng"

@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     root "static_pages#index"
     resources :users
     resources :categories
+    resources :books, except: :show
   end
   resources :relationships, only: %i(create destroy)
 end
