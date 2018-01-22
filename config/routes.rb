@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   get "/signup", to: "users#new"
+  get "/loved", to: "most_loved_book#index"
   resources :users, except: :destroy do
     resources :buy_requests, except: %i(show edit update)
     get "following/index"

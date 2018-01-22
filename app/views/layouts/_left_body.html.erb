@@ -23,54 +23,20 @@
   <div class="well well-small">
     <ul class="nav nav-list" id= "list_popular_book">
       <strong><%= t "static_pages.title_popular_book" %></strong>
-      <li>
-        <div class="thumbnail">
-          <%= link_to "#" do %>
-            <%= image_tag("b.jpg", class: "img_popular_books") %>
-          <% end %>
-          <div class="caption">
-            <h4>
-              <button class="fa fa-heart-o"></button>
-              <span class="pull-right">$22.00</span>
-            </h4>
-            <a href="#">
-              <h5 class="name_popular_books">Name book</h5>
-            </a>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="thumbnail">
-          <%= link_to "#" do %>
-            <%= image_tag("d.jpg", class: "img_popular_books") %>
-          <% end %>
-          <div class="caption">
-            <h4>
-              <button class="fa fa-heart-o"></button>
-              <span class="pull-right">$22.00</span>
-            </h4>
-            <a href="#">
-              <h5 class="name_popular_books">Name book</h5>
-            </a>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="thumbnail">
-          <%= link_to "#" do %>
-            <%= image_tag("i.jpg", class: "img_popular_books") %>
-          <% end %>
-          <div class="caption">
-            <h4>
-              <button class="fa fa-heart-o"></button>
-              <span class="pull-right">$22.00</span>
-            </h4>
-            <a href="#">
-              <h5 class="name_popular_books">Name book</h5>
-            </a>
-          </div>
-        </div>
-      </li>
+      <%if @popular_books.any? %>
+        <% @popular_books.each do |book| %>
+          <li>
+            <div class="thumbnail">
+              <%= link_to book_path(book.id) do %>
+                <%= image_tag(book.image, class: "img_popular_books") %>
+              <% end %>
+              <div class="caption">
+                <h5 class="name_popular_books"><%= book.title %></h5>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
     </ul>
   </div>
 </div>

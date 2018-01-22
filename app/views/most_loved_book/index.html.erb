@@ -1,9 +1,10 @@
-<h3><%= @title_search %></h3>
+<% provide :title, t("loved.title") %>
+<h3><%= t "loved.h3_content" %></h3>
 <ul class="thumbnails">
-  <% @books.each do |book| %>
+  <% @most_loved_books.each do |book| %>
   <li class="book">
     <div class="thumbnail">
-      <%= link_to image_tag( book.image.url, class: "img_book"), book_path(book.id) %>
+      <%= link_to image_tag( book.image, class: "img_book"), book_path(book.id) %>
       <div class="caption">
         <h5>
           <%= book.title %>
@@ -12,5 +13,4 @@
     </div>
   </li>
   <% end %>
-  <%= will_paginate @books %>
 </ul>

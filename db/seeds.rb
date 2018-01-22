@@ -6,5 +6,11 @@
                password_confirmation: password)
 end
 
-tiengviet = Category.create!(name: "Sách tiếng Việt", type_id: 0)
-tienganh = Category.create!(name: "Sách tiếng Anh", type_id: 0)
+vanhoc = Category.create!(name: "Sách văn học", type_id: 0)
+kinhte = Category.create!(name: "Sách kinh tế", type_id: 0)
+
+tieuthuyet = Category.create!(name: "Tiểu thuyết tình cảm", type_id: 1)
+trinhtham = Category.create!(name: "Truyện trinh thám", type_id: 1)
+
+kinhdoanh = Category.create!(name: "Sách kinh doanh", type_id: 2)
+quantri = Category.create!(name: "Sách quản trị, lãnh đạo", type_id: 2)

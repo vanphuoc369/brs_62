@@ -16,6 +16,14 @@
       <span><%= @book.publish_date.strftime("%d/%m/%Y") %></span>
       <br>
       <br>
+      <h5 class="label_detail_book">Thể loại: </h5>
+      <span>
+        <% @book.categories.each do |cat| %>
+          <%= cat.name %>
+        <% end %>
+      </span>
+      <br>
+      <br>
       <h5 class="label_detail_book"><%= t ".rating" %></h5>
       <span><%= t ".p", average: @average, count: @count_rate %></span>
       <hr class="soft"/>

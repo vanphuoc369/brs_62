@@ -1,0 +1,2 @@
+module MostLovedBookHelper
+end
