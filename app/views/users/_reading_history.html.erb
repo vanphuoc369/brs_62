@@ -1,0 +1,44 @@
+<div class="row-fluid content_table">
+  <strong>
+    <h5><%= t "users.h5_reading" %></h5>
+  </strong>
+  <div class="read_content">
+    <% if @reading_books.any? %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th><%= t "users.title_book" %></th>
+            <th><%= t "users.author_book" %></th>
+            <th><%= t "users.publish_date_book" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render "tbody_reading_books" %>
+        </tbody>
+      </table>
+    <% else %>
+      <p class="notify_empty"><%= @notify_reading_empty %></p>
+    <% end %>
+  </div>
+  <strong>
+    <h5><%= t "users.h5_read" %></h5>
+  </strong>
+  <div class="read_content">
+    <% if @read_books.any? %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th><%= t "users.title_book" %></th>
+            <th><%= t "users.author_book" %></th>
+            <th><%= t "users.publish_date_book" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render "tbody_read_books" %>
+        </tbody>
+      </table>
+    <% else %>
+      <p class="notify_empty"><%= @notify_read_empty %></p>
+    <% end %>
+  </div>
+</div>

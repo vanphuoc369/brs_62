@@ -421,3 +421,9 @@ input.sub_search {
   background-color: white;
   padding: 10px;
 }
+.read_content{
+  margin-left: 7%;
+}
+.notify_empty{
+  color: green;
+}

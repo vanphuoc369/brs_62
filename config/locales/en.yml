@@ -54,6 +54,13 @@ en:
     title: "Book Review System"
 
   users:
+    title_book: "Tiêu đề"
+    author_book: "Tác giả"
+    publish_date_book: "Ngày xuất bản"
+    h5_reading: "Danh sách sách đang đọc:"
+    h5_read: "Danh sách sách đã đọc:"
+    notify_reading_empty: "Chưa đánh dấu sách đang đọc"
+    notify_read_empty: "Chưa đánh dấu sách đã đọc"
     find_danger: "Không tìm thấy người dùng"
     sign_up_success: "Đăng ký thành công"
     edit_success: "Cập nhập thành công"
@@ -73,6 +80,7 @@ en:
       edit: "Cập nhập"
       favorite_book: "Sách yêu thích"
       timeline: "Dòng thời gian"
+      reading_history: "Lịch sử đọc"
       notify_empty: "Danh sách ưa thích trống"
       td_title: "Tiêu đề"
       td_author: "Tác giả"

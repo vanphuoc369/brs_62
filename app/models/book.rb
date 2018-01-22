@@ -16,7 +16,12 @@ class Book < ApplicationRecord
     joins(:reviews).group(:book_id).having("avg(rate) between #{star}-0.5 and #{star}+0.5")
   end
   scope :search_for_favorite, ->(user_id) do
-    joins(:user_books).where("user_books.user_id =  #{user_id} and user_books.is_favorite = 1") if user_id.present?
+    joins(:user_books).where("user_books.user_id = #{user_id} and user_books.is_favorite = 1") if user_id.present?
+  end
+  scope :search_for_history, ->(user_id, status) do
+    if user_id.present? && status.present?
+      joins(:user_books).where("user_books.user_id = #{user_id} and user_books.status = #{status}")
+    end
   end
 
   def self.search text_search, search_for
