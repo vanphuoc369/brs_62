@@ -12,8 +12,10 @@ Rails.application.routes.draw do
   end
   root "static_pages#home"
   resources :books do
-    resources :reviews
     resources :user_books, only: %i(create update)
+    resources :reviews do
+      resources :comments
+    end
   end
   get "/request_books", to: "request_books#index"
   namespace :admin do

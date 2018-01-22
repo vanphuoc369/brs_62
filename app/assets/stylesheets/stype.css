@@ -197,7 +197,7 @@ input.sub_search {
 .w-space{
   padding-left: 8px;
 }
-.r{
+.set_color{
   color: orange;
 }
 .ta-review{
@@ -226,7 +226,7 @@ input.sub_search {
 .label_detail_book{
   display: inline;
 }
-.content_summary,.content_review{
+.content_summary{
   margin: 18px;
 }
 .text_notify_mark{
@@ -381,4 +381,43 @@ input.sub_search {
 }
 .followBtn{
   float: right;
+}
+.panel{
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.panel-default{
+  border-color: #ddd;
+}
+.panel-default>.panel-heading{
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
+.panel-heading{
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel-body{
+  padding: 15px;
+}
+.action_buttons{
+  float: right;
+}
+.ta-review.cmt{
+  height: 80px;
+}
+.content_review{
+  padding: 1%;
+  width: 98%;
+}
+.show_review{
+  background-color: white;
+  padding: 10px;
 }

@@ -13,4 +13,24 @@ module ReviewsHelper
     return true if review.user_id == current_user.id
     false
   end
+
+  def load_star_rating rate
+    result = []
+    (Settings.min_star..Settings.max_star).each do |n|
+      if n <= rate
+        result << (content_tag :span, nil, class: "fa fa-star set_color")
+      else
+        result << load_star_empty(n - rate)
+      end
+    end
+    safe_join result
+  end
+
+  def load_star_empty value
+    if value == Settings.rating.starhalf
+      content_tag :span, nil, class: "fa fa-star-half-empty set_color"
+    else
+      content_tag :span, nil, class: "fa fa-star-o set_color"
+    end
+  end
 end

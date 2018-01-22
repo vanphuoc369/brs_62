@@ -1,26 +1,36 @@
 <div>
   <% if @reviews.any? %>
     <% @reviews.each do |review| %>
-      <div>
-        <div>
-          <h3><%= t ".h3", username: find_user_review(review.user_id) %> </h3>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <strong>
+            <%= link_to find_user_review(review.user_id), user_path(review.user_id) %>
+          </strong>
           <% if review_update? review %>
-            <h5><%= t ".h5_update", time: time_ago_in_words(review.updated_at) %></h5>
+            <%= t ".h5_update", time: time_ago_in_words(review.updated_at) %>
           <% else %>
-            <h5><%= t ".h5_create", time: time_ago_in_words(review.created_at) %></h5>
+            <%= t ".h5_create", time: time_ago_in_words(review.created_at) %>
+          <% end %>
+          <% if logged_in? && correct_user_review?(review) %>
+            <span class="action_buttons">
+              <%= link_to t(".edit"), edit_book_review_path(review.book, review) %>
+              |
+              <%= link_to t(".del"), book_review_path(review.book, review),
+              method: :delete, data: {confirm: t(".confirm")} %>
+            </span>
           <% end %>
         </div>
-        <div>
-          <span class = "stars" data-rating = <%= review.rate %> data-num-stars = <%= Settings.numstar %></span>
-        </div>
-        <div><%= review.content %></div>
-        <% if logged_in? && correct_user_review?(review) %>
+        <div class="panel-body">
           <div>
-            <%= link_to t(".edit"), edit_book_review_path(review.book, review) %>
-            <%= link_to t(".del"), book_review_path(review.book, review),
-              method: :delete, data: {confirm: t(".confirm")} %>
+            <%= load_star_rating(review.rate) %>
           </div>
-        <% end %>
+          <div><%= review.content %></div>
+          <hr class="soft"/>
+          <div>
+            <%= link_to t(".like"), "#" %>
+            <%= link_to t(".detail"), book_review_path(@book.id, review.id) %>
+          </div>
+        </div>
       </div>
     <% end %>
   <% else %>

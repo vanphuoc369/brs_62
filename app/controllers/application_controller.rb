@@ -12,6 +12,14 @@ class ApplicationController < ActionController::Base
     collection.paginate page: page, per_page: per_page
   end
 
+  def check_login_or_save_url url
+    unless logged_in?
+      session[:forwarding_url] = url
+      flash[:danger] = t "users.index.please_log_in"
+      redirect_to login_url
+    end
+  end
+
   private
 
   def logged_in_user
