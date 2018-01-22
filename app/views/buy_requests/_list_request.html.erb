@@ -1,0 +1,28 @@
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th><%= t ".title_book" %></th>
+      <th><%= t ".author" %></th>
+      <th><%= t ".created_at" %></th>
+      <th><%= t ".status" %></th>
+      <th><%= t ".destroy" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if current_user && @buy_requests.any? %>
+      <% @buy_requests.each do |request| %>
+        <tr>
+          <td><%= request.title %></td>
+          <td><%= request.author %></td>
+          <td><%= request.created_at.strftime("%d/%m/%Y") %></td>
+          <%= load_status request.status %>
+          <td>
+            <%= link_to t(".del"), user_buy_request_path(@user.id,request.id),
+              method: :delete, data: {confirm: t(".confirm")} %>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @buy_requests, id: "request-paginate" %>
