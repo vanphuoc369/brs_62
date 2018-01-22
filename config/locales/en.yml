@@ -102,6 +102,10 @@ en:
       following: "following"
       followers: "followers"
 
+  loved:
+    title: "DS sách được ưa thích nhiều nhất"
+    h3_content: "Danh sách sách được ưa thích nhiều nhất"
+
   static_pages:
     title_home: "Home"
     title_popular_book: "Popular Books"

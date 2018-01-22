@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :load_popular_books
   include SessionsHelper
   include ReviewsHelper
 
@@ -18,6 +19,10 @@ class ApplicationController < ActionController::Base
       flash[:danger] = t "users.index.please_log_in"
       redirect_to login_url
     end
+  end
+
+  def load_popular_books
+    @popular_books = Book.popular_books
   end
 
   private

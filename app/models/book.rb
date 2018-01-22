@@ -18,6 +18,16 @@ class Book < ApplicationRecord
   scope :search_for_favorite, ->(user_id) do
     joins(:user_books).where("user_books.user_id =  #{user_id} and user_books.is_favorite = 1") if user_id.present?
   end
+  scope :new_book, ->{order(created_at: :desc).limit(8)}
+  scope :items, ->{offset(3).limit(4)}
+  scope :active_items, ->{limit(4)}
+  scope :home_books, ->{limit(3)}
+  scope :popular_books, -> do
+    joins(:user_books).where("status != 0").group(:book_id).order("count(book_id)").limit(3)
+  end
+  scope :most_loved_books, -> do
+    joins(:user_books).where("is_favorite = true").group(:book_id).order("count(book_id)").limit(9)
+  end
 
   def self.search text_search, search_for
     if search_for == I18n.t("nav_bar.submit_author")
