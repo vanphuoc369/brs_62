@@ -26,6 +26,7 @@ class User < ApplicationRecord
   before_save :downcase_email
 
   scope :newest, ->{order created_at: :desc}
+  scope :list_users, ->{where("is_admin = 0")}
 
   class << self
     def digest string

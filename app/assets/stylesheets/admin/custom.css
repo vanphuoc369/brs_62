@@ -4,6 +4,36 @@
 .addBtn{
   float:right;
 }
+.action_manage{
+  color: black;
+  margin: 0px 7px;
+}
+.edit:hover{
+  color: green;
+  text-decoration: none;
+}
+.delete:hover{
+  color: red;
+  text-decoration: none;
+}
+.center{
+  text-align: center;
+}
+.notify{
+  color: green;
+}
+.pagination a{
+  margin: 0 4px;
+}
+.shopBtn{
+  margin-top: 15px;
+}
+.notify_success{
+  color: green;
+}
+.notify_danger{
+  color: red;
+}
 .content_table{
   padding: 15px 0px;
   margin: 0% 1%;
