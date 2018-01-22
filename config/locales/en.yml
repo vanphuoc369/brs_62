@@ -311,6 +311,11 @@ en:
       index:
         title: "Quản lý"
         please_log_in: "Vui lòng đăng nhập tài khoản"
+        manage_book: "Quản lý sách"
+        manage_cat: "Quản lý thể loại"
+        manage_user: "Quản lý người dùng"
+        manage_request: "Quản lý yêu cầu"
+        detail: "Chi tiết"
     categories:
       exist: "Thể loại đã tồn tại"
       category_not_found: "Không tìm thấy thể loại"

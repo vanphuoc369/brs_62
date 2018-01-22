@@ -26,3 +26,11 @@ $(document).ready(function() {
 function hidden_comment_edit(comment_id) {
   $('#comment_' + comment_id).remove();
 }
+
+$(document).ready(function() {
+  $('#review-paginate a').attr('data-remote', 'true');
+});
+
+$(document).ready(function() {
+  $('#request-paginate a').attr('data-remote', 'true');
+});

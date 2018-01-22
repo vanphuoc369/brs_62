@@ -30,6 +30,10 @@ class BooksController < ApplicationController
       @average = @book.reviews.average(:rate).round Settings.round
       @count_rate = @book.reviews.count
     end
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   private
